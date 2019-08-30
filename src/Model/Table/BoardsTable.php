@@ -14,8 +14,9 @@ class BoardsTable extends Table {
 		$this->belongsTo('People');
 	}
 	public function validationDefault(Validator $validator){
-		$validator
-			->integer('id');
+		$validator->integer('id');
+		$validator->integer('person_id')
+		->requirePresence('person_id');
 		$validator
 			->notEmpty('name', '必須項目です。');
 		$validator
