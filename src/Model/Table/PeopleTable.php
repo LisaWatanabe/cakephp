@@ -9,7 +9,7 @@ use Cake\Validation\Validator;
 class PeopleTable extends Table {
 	public function initialize(array $config){
 		// $this->hasOne('Boards');
-		// $this->hasMany('Boards');
+		$this->hasMany('Boards');
 	}
 	public function validationDefault(Validator $validator){
 		$validator->integer('id');
@@ -21,6 +21,13 @@ class PeopleTable extends Table {
 	public function buildRules(RulesChecker $rules){
 		$rules->isUnique(['name'],'すでに登録済みです。');
 		return $rules;
+	}
+	public function checkNameAndPass($data){
+		$n = $this->find()
+		->where(['name'=>$data['name']])
+		->andWhere(['password'=>$data['password']])
+		->count();
+		return $n > 0 ? true : false;
 	}
 }
 
