@@ -100,6 +100,7 @@ class ProgressIndicatorTest extends TestCase
         );
     }
 
+<<<<<<< HEAD
     /**
      * @expectedException \InvalidArgumentException
      * @expectedExceptionMessage Must have at least 2 indicator value characters.
@@ -115,27 +116,54 @@ class ProgressIndicatorTest extends TestCase
      */
     public function testCannotStartAlreadyStartedIndicator()
     {
+=======
+    public function testCannotSetInvalidIndicatorCharacters()
+    {
+        $this->expectException('InvalidArgumentException');
+        $this->expectExceptionMessage('Must have at least 2 indicator value characters.');
+        $bar = new ProgressIndicator($this->getOutputStream(), null, 100, ['1']);
+    }
+
+    public function testCannotStartAlreadyStartedIndicator()
+    {
+        $this->expectException('LogicException');
+        $this->expectExceptionMessage('Progress indicator already started.');
+>>>>>>> master
         $bar = new ProgressIndicator($this->getOutputStream());
         $bar->start('Starting...');
         $bar->start('Starting Again.');
     }
 
+<<<<<<< HEAD
     /**
      * @expectedException \LogicException
      * @expectedExceptionMessage Progress indicator has not yet been started.
      */
     public function testCannotAdvanceUnstartedIndicator()
     {
+=======
+    public function testCannotAdvanceUnstartedIndicator()
+    {
+        $this->expectException('LogicException');
+        $this->expectExceptionMessage('Progress indicator has not yet been started.');
+>>>>>>> master
         $bar = new ProgressIndicator($this->getOutputStream());
         $bar->advance();
     }
 
+<<<<<<< HEAD
     /**
      * @expectedException \LogicException
      * @expectedExceptionMessage Progress indicator has not yet been started.
      */
     public function testCannotFinishUnstartedIndicator()
     {
+=======
+    public function testCannotFinishUnstartedIndicator()
+    {
+        $this->expectException('LogicException');
+        $this->expectExceptionMessage('Progress indicator has not yet been started.');
+>>>>>>> master
         $bar = new ProgressIndicator($this->getOutputStream());
         $bar->finish('Finished');
     }

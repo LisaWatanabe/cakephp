@@ -17,8 +17,13 @@ use Symfony\Component\Process\Process;
 /**
  * WindowsPipes implementation uses temporary files as handles.
  *
+<<<<<<< HEAD
  * @see https://bugs.php.net/bug.php?id=51800
  * @see https://bugs.php.net/bug.php?id=65650
+=======
+ * @see https://bugs.php.net/51800
+ * @see https://bugs.php.net/65650
+>>>>>>> master
  *
  * @author Romain Neutron <imprec@gmail.com>
  *
@@ -43,7 +48,11 @@ class WindowsPipes extends AbstractPipes
             // Fix for PHP bug #51800: reading from STDOUT pipe hangs forever on Windows if the output is too big.
             // Workaround for this problem is to use temporary files instead of pipes on Windows platform.
             //
+<<<<<<< HEAD
             // @see https://bugs.php.net/bug.php?id=51800
+=======
+            // @see https://bugs.php.net/51800
+>>>>>>> master
             $pipes = [
                 Process::STDOUT => Process::OUT,
                 Process::STDERR => Process::ERR,
@@ -105,8 +114,13 @@ class WindowsPipes extends AbstractPipes
             ];
         }
 
+<<<<<<< HEAD
         // We're not using pipe on Windows platform as it hangs (https://bugs.php.net/bug.php?id=51800)
         // We're not using file handles as it can produce corrupted output https://bugs.php.net/bug.php?id=65650
+=======
+        // We're not using pipe on Windows platform as it hangs (https://bugs.php.net/51800)
+        // We're not using file handles as it can produce corrupted output https://bugs.php.net/65650
+>>>>>>> master
         // So we redirect output within the commandline and pass the nul device to the process
         return [
             ['pipe', 'r'],

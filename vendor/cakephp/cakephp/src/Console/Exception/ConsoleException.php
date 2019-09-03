@@ -13,6 +13,10 @@
  */
 namespace Cake\Console\Exception;
 
+<<<<<<< HEAD
+=======
+use Cake\Console\Command;
+>>>>>>> master
 use Cake\Core\Exception\Exception;
 
 /**
@@ -21,4 +25,13 @@ use Cake\Core\Exception\Exception;
  */
 class ConsoleException extends Exception
 {
+<<<<<<< HEAD
+=======
+    /**
+     * Default exception code
+     *
+     * @var int
+     */
+    protected $_defaultCode = Command::CODE_ERROR;
+>>>>>>> master
 }

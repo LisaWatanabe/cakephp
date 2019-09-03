@@ -74,7 +74,11 @@ if (!function_exists('stackTrace')) {
      * - `start` - The stack frame to start generating a trace from. Defaults to 1
      *
      * @param array $options Format for outputting stack trace
+<<<<<<< HEAD
      * @return mixed Formatted stack trace
+=======
+     * @return void
+>>>>>>> master
      */
     function stackTrace(array $options = [])
     {
@@ -84,7 +88,14 @@ if (!function_exists('stackTrace')) {
 
         $options += ['start' => 0];
         $options['start']++;
+<<<<<<< HEAD
         echo Debugger::trace($options);
+=======
+
+        /** @var string $trace */
+        $trace = Debugger::trace($options);
+        echo $trace;
+>>>>>>> master
     }
 
 }

@@ -21,7 +21,11 @@ class LockableTraitTest extends TestCase
 {
     protected static $fixturesPath;
 
+<<<<<<< HEAD
     public static function setUpBeforeClass()
+=======
+    public static function setUpBeforeClass(): void
+>>>>>>> master
     {
         self::$fixturesPath = __DIR__.'/../Fixtures/';
         require_once self::$fixturesPath.'/FooLockCommand.php';

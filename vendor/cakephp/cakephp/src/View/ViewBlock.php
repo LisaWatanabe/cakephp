@@ -49,7 +49,11 @@ class ViewBlock
     /**
      * Block content. An array of blocks indexed by name.
      *
+<<<<<<< HEAD
      * @var array
+=======
+     * @var string[]
+>>>>>>> master
      */
     protected $_blocks = [];
 
@@ -112,7 +116,11 @@ class ViewBlock
             $active = key($this->_active);
             $content = ob_get_clean();
             if ($mode === ViewBlock::OVERRIDE) {
+<<<<<<< HEAD
                 $this->_blocks[$active] = $content;
+=======
+                $this->_blocks[$active] = (string)$content;
+>>>>>>> master
             } else {
                 $this->concat($active, $content, $mode);
             }

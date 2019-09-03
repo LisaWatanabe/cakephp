@@ -86,33 +86,53 @@ class FileLocatorTest extends TestCase
         );
     }
 
+<<<<<<< HEAD
     /**
      * @expectedException \Symfony\Component\Config\Exception\FileLocatorFileNotFoundException
      * @expectedExceptionMessage The file "foobar.xml" does not exist
      */
     public function testLocateThrowsAnExceptionIfTheFileDoesNotExists()
     {
+=======
+    public function testLocateThrowsAnExceptionIfTheFileDoesNotExists()
+    {
+        $this->expectException('Symfony\Component\Config\Exception\FileLocatorFileNotFoundException');
+        $this->expectExceptionMessage('The file "foobar.xml" does not exist');
+>>>>>>> master
         $loader = new FileLocator([__DIR__.'/Fixtures']);
 
         $loader->locate('foobar.xml', __DIR__);
     }
 
+<<<<<<< HEAD
     /**
      * @expectedException \Symfony\Component\Config\Exception\FileLocatorFileNotFoundException
      */
     public function testLocateThrowsAnExceptionIfTheFileDoesNotExistsInAbsolutePath()
     {
+=======
+    public function testLocateThrowsAnExceptionIfTheFileDoesNotExistsInAbsolutePath()
+    {
+        $this->expectException('Symfony\Component\Config\Exception\FileLocatorFileNotFoundException');
+>>>>>>> master
         $loader = new FileLocator([__DIR__.'/Fixtures']);
 
         $loader->locate(__DIR__.'/Fixtures/foobar.xml', __DIR__);
     }
 
+<<<<<<< HEAD
     /**
      * @expectedException \InvalidArgumentException
      * @expectedExceptionMessage An empty file name is not valid to be located.
      */
     public function testLocateEmpty()
     {
+=======
+    public function testLocateEmpty()
+    {
+        $this->expectException('InvalidArgumentException');
+        $this->expectExceptionMessage('An empty file name is not valid to be located.');
+>>>>>>> master
         $loader = new FileLocator([__DIR__.'/Fixtures']);
 
         $loader->locate(null, __DIR__);

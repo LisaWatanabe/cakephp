@@ -53,6 +53,10 @@ class CommandCollection implements IteratorAggregate, Countable
      * @param string $name The name of the command you want to map.
      * @param string|\Cake\Console\Shell|\Cake\Console\Command $command The command to map.
      * @return $this
+<<<<<<< HEAD
+=======
+     * @throws \InvalidArgumentException
+>>>>>>> master
      */
     public function add($name, $command)
     {

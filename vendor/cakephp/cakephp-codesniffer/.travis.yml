@@ -16,6 +16,12 @@ matrix:
     - php: 7.2
       env: PHPCS=1
 
+<<<<<<< HEAD
+=======
+before_install:
+  - phpenv config-rm xdebug.ini
+
+>>>>>>> master
 before_script:
   - composer install --prefer-source
 
@@ -27,5 +33,12 @@ script:
 after_success:
   - if [[ $PHPCS != 1 && $TRAVIS_PHP_VERSION = 7.1 ]]; then bash <(curl -s https://codecov.io/bash); fi
 
+<<<<<<< HEAD
+=======
+cache:
+    directories:
+        - $HOME/.composer/cache
+
+>>>>>>> master
 notifications:
   email: false

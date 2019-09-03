@@ -26,7 +26,11 @@ class FunctionsTest extends TestCase
 
         ob_start();
         $return = dump($var1);
+<<<<<<< HEAD
         $out = ob_get_clean();
+=======
+        ob_end_clean();
+>>>>>>> master
 
         $this->assertEquals($var1, $return);
     }
@@ -41,7 +45,11 @@ class FunctionsTest extends TestCase
 
         ob_start();
         $return = dump($var1, $var2, $var3);
+<<<<<<< HEAD
         $out = ob_get_clean();
+=======
+        ob_end_clean();
+>>>>>>> master
 
         $this->assertEquals([$var1, $var2, $var3], $return);
     }

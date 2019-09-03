@@ -75,6 +75,14 @@ EOF
         }
     }
 
+<<<<<<< HEAD
+=======
+    /**
+     * @group issue-32995
+     *
+     * @runInSeparateProcess https://github.com/symfony/symfony/issues/32995
+     */
+>>>>>>> master
     public function testBadParentWithTimestamp()
     {
         $res = new ClassExistenceResource(BadParent::class, false);
@@ -82,11 +90,23 @@ EOF
     }
 
     /**
+<<<<<<< HEAD
      * @expectedException \ReflectionException
      * @expectedExceptionMessage Class Symfony\Component\Config\Tests\Fixtures\MissingParent not found
      */
     public function testBadParentWithNoTimestamp()
     {
+=======
+     * @group issue-32995
+     *
+     * @runInSeparateProcess https://github.com/symfony/symfony/issues/32995
+     */
+    public function testBadParentWithNoTimestamp()
+    {
+        $this->expectException('ReflectionException');
+        $this->expectExceptionMessage('Class Symfony\Component\Config\Tests\Fixtures\MissingParent not found');
+
+>>>>>>> master
         $res = new ClassExistenceResource(BadParent::class, false);
         $res->isFresh(0);
     }

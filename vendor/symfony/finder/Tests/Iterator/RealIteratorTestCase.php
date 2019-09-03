@@ -16,7 +16,11 @@ abstract class RealIteratorTestCase extends IteratorTestCase
     protected static $tmpDir;
     protected static $files;
 
+<<<<<<< HEAD
     public static function setUpBeforeClass()
+=======
+    public static function setUpBeforeClass(): void
+>>>>>>> master
     {
         self::$tmpDir = realpath(sys_get_temp_dir()).\DIRECTORY_SEPARATOR.'symfony_finder';
 
@@ -69,7 +73,11 @@ abstract class RealIteratorTestCase extends IteratorTestCase
         touch(self::toAbsolute('test.php'), strtotime('2005-10-15'));
     }
 
+<<<<<<< HEAD
     public static function tearDownAfterClass()
+=======
+    public static function tearDownAfterClass(): void
+>>>>>>> master
     {
         $paths = new \RecursiveIteratorIterator(
              new \RecursiveDirectoryIterator(self::$tmpDir, \RecursiveDirectoryIterator::SKIP_DOTS),

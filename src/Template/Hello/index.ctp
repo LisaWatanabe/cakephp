@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+=======
+<h1>サンプル見出し</h1>
+<p>これはサンプルページ</p>
+<?=$this->Form->create() ?>
+<fieldset>
+	<?=$this->Form->text('name') ?>
+	<?=$this->Form->password('password') ?>
+</fieldset>
+<?=$this->Form->button("送信") ?>
+<?=$this->Form->end() ?>
+<!-- <div><?=$this->Flash->render('info') ?></div> -->
+>>>>>>> master
 <!-- <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -56,6 +69,10 @@
 <!-- <p>
 	<?=$result; ?>
 </p> -->
+<<<<<<< HEAD
+=======
+<p>これはサンプルページです。</p>
+>>>>>>> master
 <?=$this->Form->create(null,
 	['type'=>'post', 'url'=>['controller'=>'Hello',
 	'action'=>'index']]) ?>
@@ -143,7 +160,11 @@
 <?=$this->Form->submit("送信") ?>
 <?=$this->Form->end(); ?>
 
+<<<<<<< HEAD
 <!-- 日時の入力フォーム生成 -->
+=======
+<!-- 日時の入力フォーム生成 --><!-- 
+>>>>>>> master
 <pre>
 	<?php print_r($result); ?>
 </pre>
@@ -154,7 +175,11 @@
 	echo $this->Form->submit("送信");
 	echo $this->Form->end();
 
+<<<<<<< HEAD
 ?>
+=======
+?> -->
+>>>>>>> master
 
 
 

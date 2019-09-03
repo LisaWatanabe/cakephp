@@ -27,7 +27,11 @@ use JsonSerializable;
  * @method array getHidden()
  * @method $this setVirtual(array $properties, $merge = false)
  * @method array getVirtual()
+<<<<<<< HEAD
  * @method $this setDirty($property, $isDirty)
+=======
+ * @method $this setDirty($property, $isDirty = true)
+>>>>>>> master
  * @method bool isDirty($property = null)
  * @method bool hasErrors($includeNested = true)
  * @method array getErrors()

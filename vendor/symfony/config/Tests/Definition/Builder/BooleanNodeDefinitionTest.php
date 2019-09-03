@@ -16,12 +16,19 @@ use Symfony\Component\Config\Definition\Builder\BooleanNodeDefinition;
 
 class BooleanNodeDefinitionTest extends TestCase
 {
+<<<<<<< HEAD
     /**
      * @expectedException \Symfony\Component\Config\Definition\Exception\InvalidDefinitionException
      * @expectedExceptionMessage ->cannotBeEmpty() is not applicable to BooleanNodeDefinition.
      */
     public function testCannotBeEmptyThrowsAnException()
     {
+=======
+    public function testCannotBeEmptyThrowsAnException()
+    {
+        $this->expectException('Symfony\Component\Config\Definition\Exception\InvalidDefinitionException');
+        $this->expectExceptionMessage('->cannotBeEmpty() is not applicable to BooleanNodeDefinition.');
+>>>>>>> master
         $def = new BooleanNodeDefinition('foo');
         $def->cannotBeEmpty();
     }

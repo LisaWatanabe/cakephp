@@ -50,7 +50,11 @@ return [
     'App' => [
         'namespace' => 'App',
         'encoding' => env('APP_ENCODING', 'UTF-8'),
+<<<<<<< HEAD
         'defaultLocale' => env('APP_DEFAULT_LOCALE', 'en_US'),
+=======
+        'defaultLocale' => env('APP_DEFAULT_LOCALE', 'ja_JP'),
+>>>>>>> master
         'defaultTimezone' => env('APP_DEFAULT_TIMEZONE', 'UTC'),
         'base' => false,
         'dir' => 'src',
@@ -76,7 +80,11 @@ return [
      *   You should treat it as extremely sensitive data.
      */
     'Security' => [
+<<<<<<< HEAD
         'salt' => env('SECURITY_SALT', '552edf9547fa2dc82a76b056740f0bf0a6a6a0f3d0bd5b5897fb9f8cfba60035'),
+=======
+        'salt' => env('SECURITY_SALT', '0552edf9547fa2dc82a76b056740f0bf0a6a6a0f3d0bd5b5897fb9f8cfba60035'),
+>>>>>>> master
     ],
 
     /**
@@ -311,6 +319,7 @@ return [
          * The test connection is used during the test suite.
          */
         'test' => [
+<<<<<<< HEAD
             'className' => Connection::class,
             'driver' => Mysql::class,
             'persistent' => false,
@@ -320,6 +329,17 @@ return [
             'password' => 'secret',
             'database' => 'test_myapp',
             //'encoding' => 'utf8mb4',
+=======
+            'className' => 'Cake\Database\Connection',
+            'driver' => 'Cake\Database\Driver\Mysql',
+            'persistent' => false,
+            'host' => 'localhost',
+            //'port' => 'non_standard_port_number',
+            'username' => 'cake',
+            'password' => '',
+            'database' => 'temp_mydata',
+            'encoding' => 'utf8',
+>>>>>>> master
             'timezone' => 'UTC',
             'cacheMetadata' => true,
             'quoteIdentifiers' => false,

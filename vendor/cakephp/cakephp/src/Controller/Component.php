@@ -159,7 +159,11 @@ class Component implements EventListenerInterface
      * Magic method for lazy loading $components.
      *
      * @param string $name Name of component to get.
+<<<<<<< HEAD
      * @return mixed A Component object or null.
+=======
+     * @return \Cake\Controller\Component|null A Component object or null.
+>>>>>>> master
      */
     public function __get($name)
     {

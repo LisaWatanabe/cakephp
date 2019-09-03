@@ -3,3 +3,7 @@
 tags
 composer.lock
 vendor/
+<<<<<<< HEAD
+=======
+/.idea/
+>>>>>>> master

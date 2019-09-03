@@ -102,7 +102,11 @@ class CommandRunner implements EventDispatcherInterface
      * $runner->setAliases(['--version' => 'version']);
      * ```
      *
+<<<<<<< HEAD
      * @param array $aliases The map of aliases to replace.
+=======
+     * @param string[] $aliases The map of aliases to replace.
+>>>>>>> master
      * @return $this
      */
     public function setAliases(array $aliases)
@@ -168,7 +172,11 @@ class CommandRunner implements EventDispatcherInterface
         if ($result === null || $result === true) {
             return Command::CODE_SUCCESS;
         }
+<<<<<<< HEAD
         if (is_int($result)) {
+=======
+        if (is_int($result) && $result >= 0 && $result <= 255) {
+>>>>>>> master
             return $result;
         }
 
@@ -329,6 +337,10 @@ class CommandRunner implements EventDispatcherInterface
      * @param \Cake\Console\ConsoleIo $io ConsoleIo object for errors.
      * @param string $name The name
      * @return string The resolved class name
+<<<<<<< HEAD
+=======
+     * @throws \RuntimeException
+>>>>>>> master
      */
     protected function resolveName($commands, $io, $name)
     {

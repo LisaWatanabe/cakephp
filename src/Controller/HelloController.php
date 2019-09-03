@@ -117,6 +117,7 @@
 
 // フォームの送信
 namespace App\Controller;
+<<<<<<< HEAD
 class HelloController extends AppController {
 	public function initialize(){
 		$this->viewBuilder()->layout('Hello');
@@ -131,6 +132,36 @@ class HelloController extends AppController {
 			$result = "※何か書いて送信してください。";
 		}
 		$this->set("result",$result);
+=======
+use Cake\Controller\Component;
+use Cake\ORM\TableRegistry;
+use Cake\Http\Middleware\CsrfProtectionMiddleware;
+use Cake\Event\Event;
+
+class HelloController extends AppController {
+	public function initialize(){
+		parent::initialize();
+		$this->loadComponent('Csrf');
+		// $this->viewBuilder()->layout('Hello');
+		// $this->set('msg','Hello/index');
+		// $this->set('footer','Hello/footer2');
+		// $this->loadComponent('Flash');
+	}
+	public function index(){
+		if ($this->request->isPost()) {
+			if (!empty($this->request->data['name']) && 
+				!empty($this->request->data['password'])) {
+				$this->Flash->success('OK!');
+			} else {
+				$this->Flash->error('bad...');
+			}
+		} else {
+			$this->Flash->info('please input form:');
+		}
+	}
+	public function beforeFilter(Event $event){
+		$this->eventManager()->off($this->Csrf);
+>>>>>>> master
 	}
 }
 // 複数選択 POST送信

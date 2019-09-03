@@ -28,7 +28,11 @@ trait SecureFieldTokenTrait
      * @param string $url The URL the form is being submitted to.
      * @param array $fields If set specifies the list of fields to use when
      *    generating the hash.
+<<<<<<< HEAD
      * @param array $unlockedFields The list of fields that are excluded from
+=======
+     * @param string[] $unlockedFields The list of fields that are excluded from
+>>>>>>> master
      *    field validation.
      * @return array The token data.
      */
@@ -50,8 +54,13 @@ trait SecureFieldTokenTrait
         ksort($locked, SORT_STRING);
         $fields += $locked;
 
+<<<<<<< HEAD
         $locked = implode(array_keys($locked), '|');
         $unlocked = implode($unlockedFields, '|');
+=======
+        $locked = implode('|', array_keys($locked));
+        $unlocked = implode('|', $unlockedFields);
+>>>>>>> master
         $hashParts = [
             $url,
             serialize($fields),

@@ -83,7 +83,11 @@ class RouteCollection
     /**
      * Route extensions
      *
+<<<<<<< HEAD
      * @var array
+=======
+     * @var string[]
+>>>>>>> master
      */
     protected $_extensions = [];
 
@@ -393,7 +397,11 @@ class RouteCollection
     /**
      * Get the extensions that can be handled.
      *
+<<<<<<< HEAD
      * @return array The valid extensions.
+=======
+     * @return string[] The valid extensions.
+>>>>>>> master
      */
     public function getExtensions()
     {
@@ -403,7 +411,11 @@ class RouteCollection
     /**
      * Set the extensions that the route collection can handle.
      *
+<<<<<<< HEAD
      * @param array $extensions The list of extensions to set.
+=======
+     * @param string[] $extensions The list of extensions to set.
+>>>>>>> master
      * @param bool $merge Whether to merge with or override existing extensions.
      *   Defaults to `true`.
      * @return $this
@@ -430,6 +442,10 @@ class RouteCollection
      * @param string $name The name of the middleware. Used when applying middleware to a scope.
      * @param callable|string $middleware The middleware callable or class name to register.
      * @return $this
+<<<<<<< HEAD
+=======
+     * @throws \RuntimeException
+>>>>>>> master
      */
     public function registerMiddleware($name, $middleware)
     {
@@ -442,7 +458,11 @@ class RouteCollection
      * Add middleware to a middleware group
      *
      * @param string $name Name of the middleware group
+<<<<<<< HEAD
      * @param array $middlewareNames Names of the middleware
+=======
+     * @param string[] $middlewareNames Names of the middleware
+>>>>>>> master
      * @return $this
      */
     public function middlewareGroup($name, array $middlewareNames)
@@ -527,7 +547,11 @@ class RouteCollection
     /**
      * Get an array of middleware given a list of names
      *
+<<<<<<< HEAD
      * @param array $names The names of the middleware or groups to fetch
+=======
+     * @param string[] $names The names of the middleware or groups to fetch
+>>>>>>> master
      * @return array An array of middleware. If any of the passed names are groups,
      *   the groups middleware will be flattened into the returned list.
      * @throws \RuntimeException when a requested middleware does not exist.

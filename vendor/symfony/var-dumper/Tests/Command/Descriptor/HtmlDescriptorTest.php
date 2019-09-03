@@ -21,13 +21,21 @@ class HtmlDescriptorTest extends TestCase
 {
     private static $timezone;
 
+<<<<<<< HEAD
     public static function setUpBeforeClass()
+=======
+    public static function setUpBeforeClass(): void
+>>>>>>> master
     {
         self::$timezone = date_default_timezone_get();
         date_default_timezone_set('UTC');
     }
 
+<<<<<<< HEAD
     public static function tearDownAfterClass()
+=======
+    public static function tearDownAfterClass(): void
+>>>>>>> master
     {
         date_default_timezone_set(self::$timezone);
     }

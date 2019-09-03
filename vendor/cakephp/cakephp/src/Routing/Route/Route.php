@@ -83,7 +83,11 @@ class Route
     /**
      * List of connected extensions for this route.
      *
+<<<<<<< HEAD
      * @var array
+=======
+     * @var string[]
+>>>>>>> master
      */
     protected $_extensions = [];
 
@@ -161,7 +165,11 @@ class Route
     /**
      * Set the supported extensions for this route.
      *
+<<<<<<< HEAD
      * @param array $extensions The extensions to set.
+=======
+     * @param string[] $extensions The extensions to set.
+>>>>>>> master
      * @return $this
      */
     public function setExtensions(array $extensions)
@@ -177,7 +185,11 @@ class Route
     /**
      * Get the supported extensions for this route.
      *
+<<<<<<< HEAD
      * @return array
+=======
+     * @return string[]
+>>>>>>> master
      */
     public function getExtensions()
     {
@@ -187,7 +199,11 @@ class Route
     /**
      * Set the accepted HTTP methods for this route.
      *
+<<<<<<< HEAD
      * @param array $methods The HTTP methods to accept.
+=======
+     * @param string[] $methods The HTTP methods to accept.
+>>>>>>> master
      * @return $this
      * @throws \InvalidArgumentException
      */
@@ -211,12 +227,20 @@ class Route
      * If any of your patterns contain multibyte values, the `multibytePattern`
      * mode will be enabled.
      *
+<<<<<<< HEAD
      * @param array $patterns The patterns to apply to routing elements
+=======
+     * @param string[] $patterns The patterns to apply to routing elements
+>>>>>>> master
      * @return $this
      */
     public function setPatterns(array $patterns)
     {
+<<<<<<< HEAD
         $patternValues = implode("", $patterns);
+=======
+        $patternValues = implode('', $patterns);
+>>>>>>> master
         if (mb_strlen($patternValues) < strlen($patternValues)) {
             $this->options['multibytePattern'] = true;
         }
@@ -241,7 +265,11 @@ class Route
     /**
      * Set the names of parameters that will be converted into passed parameters
      *
+<<<<<<< HEAD
      * @param array $names The names of the parameters that should be passed.
+=======
+     * @param string[] $names The names of the parameters that should be passed.
+>>>>>>> master
      * @return $this
      */
     public function setPass(array $names)

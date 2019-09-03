@@ -46,6 +46,11 @@ class ArrayInput extends Input
 
             return $value;
         }
+<<<<<<< HEAD
+=======
+
+        return null;
+>>>>>>> master
     }
 
     /**
@@ -132,7 +137,11 @@ class ArrayInput extends Input
             }
             if (0 === strpos($key, '--')) {
                 $this->addLongOption(substr($key, 2), $value);
+<<<<<<< HEAD
             } elseif ('-' === $key[0]) {
+=======
+            } elseif (0 === strpos($key, '-')) {
+>>>>>>> master
                 $this->addShortOption(substr($key, 1), $value);
             } else {
                 $this->addArgument($key, $value);

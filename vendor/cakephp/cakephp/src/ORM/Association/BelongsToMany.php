@@ -105,7 +105,11 @@ class BelongsToMany extends Association
     /**
      * The name of the field representing the foreign key to the target table
      *
+<<<<<<< HEAD
      * @var string|array
+=======
+     * @var string|string[]
+>>>>>>> master
      */
     protected $_targetForeignKey;
 
@@ -160,7 +164,11 @@ class BelongsToMany extends Association
     /**
      * Sets the name of the field representing the foreign key to the target table.
      *
+<<<<<<< HEAD
      * @param string $key the key to be used to link both tables together
+=======
+     * @param string|string[] $key the key to be used to link both tables together
+>>>>>>> master
      * @return $this
      */
     public function setTargetForeignKey($key)
@@ -173,7 +181,11 @@ class BelongsToMany extends Association
     /**
      * Gets the name of the field representing the foreign key to the target table.
      *
+<<<<<<< HEAD
      * @return string
+=======
+     * @return string|string[]
+>>>>>>> master
      */
     public function getTargetForeignKey()
     {
@@ -809,7 +821,11 @@ class BelongsToMany extends Association
      *
      * @param \Cake\Datasource\EntityInterface $sourceEntity the entity from source table in this
      * association
+<<<<<<< HEAD
      * @param array $targetEntities list of entities to link to link to the source entity using the
+=======
+     * @param \Cake\Datasource\EntityInterface[] $targetEntities list of entities to link to link to the source entity using the
+>>>>>>> master
      * junction table
      * @param array $options list of options accepted by `Table::save()`
      * @return bool success
@@ -883,7 +899,11 @@ class BelongsToMany extends Association
      *
      * @param \Cake\Datasource\EntityInterface $sourceEntity the row belonging to the `source` side
      *   of this association
+<<<<<<< HEAD
      * @param array $targetEntities list of entities belonging to the `target` side
+=======
+     * @param \Cake\Datasource\EntityInterface[] $targetEntities list of entities belonging to the `target` side
+>>>>>>> master
      *   of this association
      * @param array $options list of options to be passed to the internal `save` call
      * @throws \InvalidArgumentException when any of the values in $targetEntities is
@@ -933,7 +953,11 @@ class BelongsToMany extends Association
      *
      * @param \Cake\Datasource\EntityInterface $sourceEntity An entity persisted in the source table for
      *   this association.
+<<<<<<< HEAD
      * @param array $targetEntities List of entities persisted in the target table for
+=======
+     * @param \Cake\Datasource\EntityInterface[] $targetEntities List of entities persisted in the target table for
+>>>>>>> master
      *   this association.
      * @param array|bool $options List of options to be passed to the internal `delete` call,
      *   or a `boolean` as `cleanProperty` key shortcut.
@@ -1251,7 +1275,11 @@ class BelongsToMany extends Association
      * `$targetEntities` that were not deleted from calculating the difference.
      *
      * @param \Cake\ORM\Query $existing a query for getting existing links
+<<<<<<< HEAD
      * @param array $jointEntities link entities that should be persisted
+=======
+     * @param \Cake\Datasource\EntityInterface[] $jointEntities link entities that should be persisted
+>>>>>>> master
      * @param array $targetEntities entities in target table that are related to
      * the `$jointEntities`
      * @param array $options list of options accepted by `Table::delete()`
@@ -1318,7 +1346,11 @@ class BelongsToMany extends Association
      *
      * @param \Cake\Datasource\EntityInterface $sourceEntity the row belonging to the `source` side
      *   of this association
+<<<<<<< HEAD
      * @param array $targetEntities list of entities belonging to the `target` side
+=======
+     * @param \Cake\Datasource\EntityInterface[] $targetEntities list of entities belonging to the `target` side
+>>>>>>> master
      *   of this association
      * @return bool
      * @throws \InvalidArgumentException
@@ -1350,7 +1382,11 @@ class BelongsToMany extends Association
      *   association.
      * @throws \InvalidArgumentException if any of the entities is lacking a primary
      *   key value
+<<<<<<< HEAD
      * @return array
+=======
+     * @return \Cake\Datasource\EntityInterface[]
+>>>>>>> master
      */
     protected function _collectJointEntities($sourceEntity, $targetEntities)
     {

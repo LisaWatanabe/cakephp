@@ -60,7 +60,11 @@ bar';
         $ret = $tester->execute(['filename' => $filename], ['decorated' => false]);
 
         $this->assertEquals(1, $ret, 'Returns 1 in case of error');
+<<<<<<< HEAD
         $this->assertContains('Unable to parse at line 3 (near "bar").', trim($tester->getDisplay()));
+=======
+        $this->assertStringContainsString('Unable to parse at line 3 (near "bar").', trim($tester->getDisplay()));
+>>>>>>> master
     }
 
     public function testConstantAsKey()
@@ -90,11 +94,17 @@ YAML;
         $this->assertSame(1, $ret, 'lint:yaml exits with code 1 in case of error');
     }
 
+<<<<<<< HEAD
     /**
      * @expectedException \RuntimeException
      */
     public function testLintFileNotReadable()
     {
+=======
+    public function testLintFileNotReadable()
+    {
+        $this->expectException('RuntimeException');
+>>>>>>> master
         $tester = $this->createCommandTester();
         $filename = $this->createFile('');
         unlink($filename);
@@ -127,13 +137,21 @@ YAML;
         return new CommandTester($command);
     }
 
+<<<<<<< HEAD
     protected function setUp()
+=======
+    protected function setUp(): void
+>>>>>>> master
     {
         $this->files = [];
         @mkdir(sys_get_temp_dir().'/framework-yml-lint-test');
     }
 
+<<<<<<< HEAD
     protected function tearDown()
+=======
+    protected function tearDown(): void
+>>>>>>> master
     {
         foreach ($this->files as $file) {
             if (file_exists($file)) {

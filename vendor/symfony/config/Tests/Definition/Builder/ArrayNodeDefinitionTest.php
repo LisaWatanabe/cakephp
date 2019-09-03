@@ -36,11 +36,18 @@ class ArrayNodeDefinitionTest extends TestCase
     }
 
     /**
+<<<<<<< HEAD
      * @expectedException \Symfony\Component\Config\Definition\Exception\InvalidDefinitionException
+=======
+>>>>>>> master
      * @dataProvider providePrototypeNodeSpecificCalls
      */
     public function testPrototypeNodeSpecificOption($method, $args)
     {
+<<<<<<< HEAD
+=======
+        $this->expectException('Symfony\Component\Config\Definition\Exception\InvalidDefinitionException');
+>>>>>>> master
         $node = new ArrayNodeDefinition('root');
 
         $node->{$method}(...$args);
@@ -59,11 +66,17 @@ class ArrayNodeDefinitionTest extends TestCase
         ];
     }
 
+<<<<<<< HEAD
     /**
      * @expectedException \Symfony\Component\Config\Definition\Exception\InvalidDefinitionException
      */
     public function testConcreteNodeSpecificOption()
     {
+=======
+    public function testConcreteNodeSpecificOption()
+    {
+        $this->expectException('Symfony\Component\Config\Definition\Exception\InvalidDefinitionException');
+>>>>>>> master
         $node = new ArrayNodeDefinition('root');
         $node
             ->addDefaultsIfNotSet()
@@ -72,11 +85,17 @@ class ArrayNodeDefinitionTest extends TestCase
         $node->getNode();
     }
 
+<<<<<<< HEAD
     /**
      * @expectedException \Symfony\Component\Config\Definition\Exception\InvalidDefinitionException
      */
     public function testPrototypeNodesCantHaveADefaultValueWhenUsingDefaultChildren()
     {
+=======
+    public function testPrototypeNodesCantHaveADefaultValueWhenUsingDefaultChildren()
+    {
+        $this->expectException('Symfony\Component\Config\Definition\Exception\InvalidDefinitionException');
+>>>>>>> master
         $node = new ArrayNodeDefinition('root');
         $node
             ->defaultValue([])
@@ -317,12 +336,19 @@ class ArrayNodeDefinitionTest extends TestCase
         $this->addToAssertionCount(1);
     }
 
+<<<<<<< HEAD
     /**
      * @expectedException \Symfony\Component\Config\Definition\Exception\InvalidConfigurationException
      * @expectedExceptionMessage The path "root" should have at least 1 element(s) defined.
      */
     public function testCannotBeEmpty()
     {
+=======
+    public function testCannotBeEmpty()
+    {
+        $this->expectException('Symfony\Component\Config\Definition\Exception\InvalidConfigurationException');
+        $this->expectExceptionMessage('The path "root" should have at least 1 element(s) defined.');
+>>>>>>> master
         $node = new ArrayNodeDefinition('root');
         $node
             ->cannotBeEmpty()
@@ -345,12 +371,19 @@ class ArrayNodeDefinitionTest extends TestCase
         $this->assertSame('The "root.foo" node is deprecated.', $deprecatedNode->getDeprecationMessage($deprecatedNode->getName(), $deprecatedNode->getPath()));
     }
 
+<<<<<<< HEAD
     /**
      * @expectedException \Symfony\Component\Config\Definition\Exception\InvalidDefinitionException
      * @expectedExceptionMessage ->cannotBeEmpty() is not applicable to concrete nodes at path "root"
      */
     public function testCannotBeEmptyOnConcreteNode()
     {
+=======
+    public function testCannotBeEmptyOnConcreteNode()
+    {
+        $this->expectException('Symfony\Component\Config\Definition\Exception\InvalidDefinitionException');
+        $this->expectExceptionMessage('->cannotBeEmpty() is not applicable to concrete nodes at path "root"');
+>>>>>>> master
         $node = new ArrayNodeDefinition('root');
         $node->cannotBeEmpty();
 
