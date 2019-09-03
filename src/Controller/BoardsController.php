@@ -2,13 +2,19 @@
 namespace App\Controller;
 	use Cake\ORM\TableRegistry;
 	use Cake\Validation\Validator;
+<<<<<<< HEAD
 	// use Cake\Exception;
 	// use Cake\Log\Log;
 	// use Cake\Datasource\ConnectionManager;
+=======
+	use Cake\I18n\I18n;
+	// use Cake\Controller\Component;
+>>>>>>> master
 
 class BoardsController extends AppController {
 	private $people;
 
+<<<<<<< HEAD
 	public function initialize(){
 		parent::initialize();
 		$this->people = TableRegistry::get('People');
@@ -20,6 +26,37 @@ class BoardsController extends AppController {
 		->contain('People');
 		$this->set('data',$data);
 	}
+=======
+	public $paginate = [
+		'limit' => 5,
+		'order' => ['id' => 'DESC'],
+		'contain' => ['People']
+	];
+	public function initialize(){
+		parent::initialize();
+		$this->people = TableRegistry::get('People');
+		$this->loadComponent('Paginator');
+		$this->loadComponent('RequestHandler');
+		// $this->loadComponent('Flash');
+	}
+	public function index(){
+		$data = $this->paginate($this->Boards);
+		$this->set('data',$data);
+		// $this->Flash->set('メッセージを表示',
+		// [
+		// 	'element' =>'info',
+		// 	'key' => 'info'
+		// ]);
+	}
+		// if ($this->RequestHandler->isRss()){
+		// 	$data = $this->Boards
+		// 	->find()
+		// 	->limit(10)
+		// 	->order(['id' => 'DESC']);
+		// 	$this->set(compact('data'));
+		// } else {
+		// $this->set('count',$data->count());
+>>>>>>> master
 	public function add(){
 		if($this->request->isPost()){
 			if(!$this->people->checkNameAndPass($this->request->data)){

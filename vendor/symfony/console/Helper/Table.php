@@ -207,8 +207,11 @@ class Table
     /**
      * Sets the minimum width of all columns.
      *
+<<<<<<< HEAD
      * @param array $widths
      *
+=======
+>>>>>>> master
      * @return $this
      */
     public function setColumnWidths(array $widths)

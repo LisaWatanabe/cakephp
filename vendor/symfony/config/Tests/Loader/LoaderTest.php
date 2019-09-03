@@ -43,11 +43,17 @@ class LoaderTest extends TestCase
         $this->assertSame($resolvedLoader, $loader->resolve('foo.xml'), '->resolve() finds a loader');
     }
 
+<<<<<<< HEAD
     /**
      * @expectedException \Symfony\Component\Config\Exception\LoaderLoadException
      */
     public function testResolveWhenResolverCannotFindLoader()
     {
+=======
+    public function testResolveWhenResolverCannotFindLoader()
+    {
+        $this->expectException('Symfony\Component\Config\Exception\LoaderLoadException');
+>>>>>>> master
         $resolver = $this->getMockBuilder('Symfony\Component\Config\Loader\LoaderResolverInterface')->getMock();
         $resolver->expects($this->once())
             ->method('resolve')

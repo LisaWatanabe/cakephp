@@ -443,7 +443,11 @@ class Xml
      * @param \SimpleXMLElement $xml SimpleXMLElement object
      * @param array $parentData Parent array with data
      * @param string $ns Namespace of current child
+<<<<<<< HEAD
      * @param array $namespaces List of namespaces in XML
+=======
+     * @param string[] $namespaces List of namespaces in XML
+>>>>>>> master
      * @return void
      */
     protected static function _toArray($xml, &$parentData, $ns, $namespaces)

@@ -47,22 +47,36 @@ class InputTest extends TestCase
         $this->assertEquals(['name' => 'foo', 'bar' => null], $input->getOptions(), '->getOptions() returns all option values');
     }
 
+<<<<<<< HEAD
     /**
      * @expectedException        \InvalidArgumentException
      * @expectedExceptionMessage The "foo" option does not exist.
      */
     public function testSetInvalidOption()
     {
+=======
+    public function testSetInvalidOption()
+    {
+        $this->expectException('InvalidArgumentException');
+        $this->expectExceptionMessage('The "foo" option does not exist.');
+>>>>>>> master
         $input = new ArrayInput(['--name' => 'foo'], new InputDefinition([new InputOption('name'), new InputOption('bar', '', InputOption::VALUE_OPTIONAL, '', 'default')]));
         $input->setOption('foo', 'bar');
     }
 
+<<<<<<< HEAD
     /**
      * @expectedException        \InvalidArgumentException
      * @expectedExceptionMessage The "foo" option does not exist.
      */
     public function testGetInvalidOption()
     {
+=======
+    public function testGetInvalidOption()
+    {
+        $this->expectException('InvalidArgumentException');
+        $this->expectExceptionMessage('The "foo" option does not exist.');
+>>>>>>> master
         $input = new ArrayInput(['--name' => 'foo'], new InputDefinition([new InputOption('name'), new InputOption('bar', '', InputOption::VALUE_OPTIONAL, '', 'default')]));
         $input->getOption('foo');
     }
@@ -81,43 +95,71 @@ class InputTest extends TestCase
         $this->assertEquals(['name' => 'foo', 'bar' => 'default'], $input->getArguments(), '->getArguments() returns all argument values, even optional ones');
     }
 
+<<<<<<< HEAD
     /**
      * @expectedException        \InvalidArgumentException
      * @expectedExceptionMessage The "foo" argument does not exist.
      */
     public function testSetInvalidArgument()
     {
+=======
+    public function testSetInvalidArgument()
+    {
+        $this->expectException('InvalidArgumentException');
+        $this->expectExceptionMessage('The "foo" argument does not exist.');
+>>>>>>> master
         $input = new ArrayInput(['name' => 'foo'], new InputDefinition([new InputArgument('name'), new InputArgument('bar', InputArgument::OPTIONAL, '', 'default')]));
         $input->setArgument('foo', 'bar');
     }
 
+<<<<<<< HEAD
     /**
      * @expectedException        \InvalidArgumentException
      * @expectedExceptionMessage The "foo" argument does not exist.
      */
     public function testGetInvalidArgument()
     {
+=======
+    public function testGetInvalidArgument()
+    {
+        $this->expectException('InvalidArgumentException');
+        $this->expectExceptionMessage('The "foo" argument does not exist.');
+>>>>>>> master
         $input = new ArrayInput(['name' => 'foo'], new InputDefinition([new InputArgument('name'), new InputArgument('bar', InputArgument::OPTIONAL, '', 'default')]));
         $input->getArgument('foo');
     }
 
+<<<<<<< HEAD
     /**
      * @expectedException        \RuntimeException
      * @expectedExceptionMessage Not enough arguments (missing: "name").
      */
     public function testValidateWithMissingArguments()
     {
+=======
+    public function testValidateWithMissingArguments()
+    {
+        $this->expectException('RuntimeException');
+        $this->expectExceptionMessage('Not enough arguments (missing: "name").');
+>>>>>>> master
         $input = new ArrayInput([]);
         $input->bind(new InputDefinition([new InputArgument('name', InputArgument::REQUIRED)]));
         $input->validate();
     }
 
+<<<<<<< HEAD
     /**
      * @expectedException        \RuntimeException
      * @expectedExceptionMessage Not enough arguments (missing: "name").
      */
     public function testValidateWithMissingRequiredArguments()
     {
+=======
+    public function testValidateWithMissingRequiredArguments()
+    {
+        $this->expectException('RuntimeException');
+        $this->expectExceptionMessage('Not enough arguments (missing: "name").');
+>>>>>>> master
         $input = new ArrayInput(['bar' => 'baz']);
         $input->bind(new InputDefinition([new InputArgument('name', InputArgument::REQUIRED), new InputArgument('bar', InputArgument::OPTIONAL)]));
         $input->validate();

@@ -17,10 +17,13 @@ class GitignoreTest extends TestCase
 {
     /**
      * @dataProvider provider
+<<<<<<< HEAD
      *
      * @param string $patterns
      * @param array  $matchingCases
      * @param array  $nonMatchingCases
+=======
+>>>>>>> master
      */
     public function testCases(string $patterns, array $matchingCases, array $nonMatchingCases)
     {

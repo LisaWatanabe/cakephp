@@ -65,8 +65,15 @@ class TableHelper extends Helper
         if (strpos($text, '<') === false && strpos($text, '>') === false) {
             return mb_strwidth($text);
         }
+<<<<<<< HEAD
         $styles = array_keys($this->_io->styles());
         $tags = implode('|', $styles);
+=======
+
+        /** @var array $styles */
+        $styles = $this->_io->styles();
+        $tags = implode('|', array_keys($styles));
+>>>>>>> master
         $text = preg_replace('#</?(?:' . $tags . ')>#', '', $text);
 
         return mb_strwidth($text);

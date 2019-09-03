@@ -65,6 +65,10 @@ trait EmailTrait
     {
         $this->assertThat($count, new MailCount(), $message);
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> master
     /**
      *
      * Asserts that no emails were sent

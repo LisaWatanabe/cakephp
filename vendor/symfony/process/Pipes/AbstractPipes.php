@@ -88,12 +88,21 @@ abstract class AbstractPipes implements PipesInterface
     /**
      * Writes input to stdin.
      *
+<<<<<<< HEAD
+=======
+     * @return array|null
+     *
+>>>>>>> master
      * @throws InvalidArgumentException When an input iterator yields a non supported value
      */
     protected function write()
     {
         if (!isset($this->pipes[0])) {
+<<<<<<< HEAD
             return;
+=======
+            return null;
+>>>>>>> master
         }
         $input = $this->input;
 
@@ -122,7 +131,11 @@ abstract class AbstractPipes implements PipesInterface
 
         // let's have a look if something changed in streams
         if (false === @stream_select($r, $w, $e, 0, 0)) {
+<<<<<<< HEAD
             return;
+=======
+            return null;
+>>>>>>> master
         }
 
         foreach ($w as $stdin) {
@@ -166,6 +179,11 @@ abstract class AbstractPipes implements PipesInterface
         } elseif (!$w) {
             return [$this->pipes[0]];
         }
+<<<<<<< HEAD
+=======
+
+        return null;
+>>>>>>> master
     }
 
     /**

@@ -195,6 +195,16 @@ trait IntegrationTestTrait
     protected $_cookieEncryptionKey;
 
     /**
+<<<<<<< HEAD
+=======
+     * List of fields that are excluded from field validation.
+     *
+     * @var string[]
+     */
+    protected $_unlockedFields = [];
+
+    /**
+>>>>>>> master
      * Auto-detect if the HTTP middleware stack should be used.
      *
      * @before
@@ -271,6 +281,20 @@ trait IntegrationTestTrait
     }
 
     /**
+<<<<<<< HEAD
+=======
+     * Set list of fields that are excluded from field validation.
+     *
+     * @param string[] $unlockedFields List of fields that are excluded from field validation.
+     * @return void
+     */
+    public function setUnlockedFields(array $unlockedFields = [])
+    {
+        $this->_unlockedFields = $unlockedFields;
+    }
+
+    /**
+>>>>>>> master
      * Calling this method will add a CSRF token to the request.
      *
      * Both the POST data and cookie will be populated when this option
@@ -671,10 +695,21 @@ trait IntegrationTestTrait
     protected function _addTokens($url, $data)
     {
         if ($this->_securityToken === true) {
+<<<<<<< HEAD
             $keys = array_map(function ($field) {
                 return preg_replace('/(\.\d+)+$/', '', $field);
             }, array_keys(Hash::flatten($data)));
             $tokenData = $this->_buildFieldToken($url, array_unique($keys));
+=======
+            $fields = array_diff_key($data, array_flip($this->_unlockedFields));
+
+            $keys = array_map(function ($field) {
+                return preg_replace('/(\.\d+)+$/', '', $field);
+            }, array_keys(Hash::flatten($fields)));
+
+            $tokenData = $this->_buildFieldToken($url, array_unique($keys), $this->_unlockedFields);
+
+>>>>>>> master
             $data['_Token'] = $tokenData;
             $data['_Token']['debug'] = 'SecurityComponent debug data would be added here';
         }

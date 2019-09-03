@@ -13,14 +13,23 @@
  */
 namespace Cake\Console\Exception;
 
+<<<<<<< HEAD
 use Cake\Core\Exception\Exception;
 
+=======
+>>>>>>> master
 /**
  * Exception class for halting errors in console tasks
  *
  * @see \Cake\Console\Shell::_stop()
  * @see \Cake\Console\Shell::error()
+<<<<<<< HEAD
  */
 class StopException extends Exception
+=======
+ * @see \Cake\Console\Command::abort()
+ */
+class StopException extends ConsoleException
+>>>>>>> master
 {
 }

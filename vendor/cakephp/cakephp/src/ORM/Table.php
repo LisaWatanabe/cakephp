@@ -191,7 +191,11 @@ class Table implements RepositoryInterface, EventListenerInterface, EventDispatc
     /**
      * The name of the field that represents the primary key in the table
      *
+<<<<<<< HEAD
      * @var string|array
+=======
+     * @var string|string[]
+>>>>>>> master
      */
     protected $_primaryKey;
 
@@ -664,7 +668,11 @@ class Table implements RepositoryInterface, EventListenerInterface, EventDispatc
     /**
      * Sets the primary key field name.
      *
+<<<<<<< HEAD
      * @param string|array $key Sets a new name to be used as primary key
+=======
+     * @param string|string[] $key Sets a new name to be used as primary key
+>>>>>>> master
      * @return $this
      */
     public function setPrimaryKey($key)
@@ -677,7 +685,11 @@ class Table implements RepositoryInterface, EventListenerInterface, EventDispatc
     /**
      * Returns the primary key field name.
      *
+<<<<<<< HEAD
      * @return string|array
+=======
+     * @return string|string[]
+>>>>>>> master
      */
     public function getPrimaryKey()
     {
@@ -696,8 +708,13 @@ class Table implements RepositoryInterface, EventListenerInterface, EventDispatc
      * Returns the primary key field name or sets a new one
      *
      * @deprecated 3.4.0 Use setPrimaryKey()/getPrimaryKey() instead.
+<<<<<<< HEAD
      * @param string|array|null $key Sets a new name to be used as primary key
      * @return string|array
+=======
+     * @param string|string[]|null $key Sets a new name to be used as primary key
+     * @return string|string[]
+>>>>>>> master
      */
     public function primaryKey($key = null)
     {
@@ -2157,8 +2174,13 @@ class Table implements RepositoryInterface, EventListenerInterface, EventDispatc
      * Note: The ORM will not generate primary key values for composite primary keys.
      * You can overwrite _newId() in your table class.
      *
+<<<<<<< HEAD
      * @param array $primary The primary key columns to get a new ID for.
      * @return null|string|array Either null or the primary key value or a list of primary key values.
+=======
+     * @param string[] $primary The primary key columns to get a new ID for.
+     * @return string|null Either null or the primary key value or a list of primary key values.
+>>>>>>> master
      */
     protected function _newId($primary)
     {

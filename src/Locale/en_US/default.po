@@ -1,0 +1,255 @@
+# LANGUAGE translation of CakePHP Application
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2019-08-30 09:22+0000\n"
+"PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+msgid "{0} post"
+msgstr "count:{0}"
+
+#: Template/Boards/index.ctp:1
+msgid "board"
+msgstr "mini Board"
+
+#: Template/Boards/index.ctp:2
+msgid "post"
+msgstr "* post your message! *"
+
+#: Template/Boards/index.ctp:8
+msgid "user"
+msgstr "user name"
+
+#: Template/Boards/index.ctp:9
+msgid "title"
+msgstr "title"
+
+#: Controller/BooksController.php:54
+#: Controller/BooksController.php:78
+msgid "The book has been saved."
+msgstr ""
+
+#: Controller/BooksController.php:58
+#: Controller/BooksController.php:82
+msgid "The book could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/BooksController.php:99
+msgid "The book has been deleted."
+msgstr ""
+
+#: Controller/BooksController.php:101
+msgid "The book could not be deleted. Please, try again."
+msgstr ""
+
+#: Controller/PeopleController.php:54
+#: Controller/PeopleController.php:78
+msgid "The person has been saved."
+msgstr ""
+
+#: Controller/PeopleController.php:58
+#: Controller/PeopleController.php:82
+msgid "The person could not be saved. Please, try again."
+msgstr ""
+
+#: Controller/PeopleController.php:99
+msgid "The person has been deleted."
+msgstr ""
+
+#: Controller/PeopleController.php:101
+msgid "The person could not be deleted. Please, try again."
+msgstr ""
+
+#: Model/Table/BoardsTable.php:30
+msgid "最大数を超えています"
+msgstr ""
+
+#: Template/Boards/index.ctp:1
+msgid "board"
+msgstr ""
+
+#: Template/Boards/index.ctp:2
+msgid "post"
+msgstr ""
+
+#: Template/Boards/index.ctp:6
+msgid "user"
+msgstr ""
+
+#: Template/Boards/index.ctp:7
+msgid "title"
+msgstr ""
+
+#: Template/Books/add.ctp:9
+#: Template/Books/edit.ctp:9
+#: Template/Books/index.ctp:9
+#: Template/Books/index.ctp:20
+#: Template/Books/view.ctp:9
+#: Template/People/add.ctp:9
+#: Template/People/edit.ctp:9
+#: Template/People/index.ctp:9
+#: Template/People/index.ctp:21
+#: Template/People/view.ctp:9
+msgid "Actions"
+msgstr ""
+
+#: Template/Books/add.ctp:10
+#: Template/Books/edit.ctp:16
+#: Template/Books/view.ctp:12
+msgid "List Books"
+msgstr ""
+
+#: Template/Books/add.ctp:16
+msgid "Add Book"
+msgstr ""
+
+#: Template/Books/add.ctp:23
+#: Template/Books/edit.ctp:29
+#: Template/People/add.ctp:23
+#: Template/People/edit.ctp:29
+msgid "Submit"
+msgstr ""
+
+#: Template/Books/edit.ctp:11
+#: Template/Books/index.ctp:31
+#: Template/People/edit.ctp:11
+#: Template/People/index.ctp:33
+msgid "Delete"
+msgstr ""
+
+#: Template/Books/edit.ctp:13
+#: Template/Books/index.ctp:31
+#: Template/Books/view.ctp:11
+#: Template/People/edit.ctp:13
+#: Template/People/index.ctp:33
+#: Template/People/view.ctp:11
+msgid "Are you sure you want to delete # {0}?"
+msgstr ""
+
+#: Template/Books/edit.ctp:22
+#: Template/Books/view.ctp:10
+msgid "Edit Book"
+msgstr ""
+
+#: Template/Books/index.ctp:10
+#: Template/Books/view.ctp:13
+msgid "New Book"
+msgstr ""
+
+#: Template/Books/index.ctp:14
+msgid "Books"
+msgstr ""
+
+#: Template/Books/index.ctp:29
+#: Template/People/index.ctp:31
+msgid "View"
+msgstr ""
+
+#: Template/Books/index.ctp:30
+#: Template/People/index.ctp:32
+msgid "Edit"
+msgstr ""
+
+#: Template/Books/index.ctp:39
+#: Template/People/index.ctp:41
+msgid "first"
+msgstr ""
+
+#: Template/Books/index.ctp:40
+#: Template/People/index.ctp:42
+msgid "previous"
+msgstr ""
+
+#: Template/Books/index.ctp:42
+#: Template/People/index.ctp:44
+msgid "next"
+msgstr ""
+
+#: Template/Books/index.ctp:43
+#: Template/People/index.ctp:45
+msgid "last"
+msgstr ""
+
+#: Template/Books/index.ctp:45
+#: Template/People/index.ctp:47
+msgid "Page {{page}} of {{pages}}, showing {{current}} record(s) out of {{count}} total"
+msgstr ""
+
+#: Template/Books/view.ctp:11
+msgid "Delete Book"
+msgstr ""
+
+#: Template/Books/view.ctp:20
+#: Template/People/view.ctp:28
+msgid "Id"
+msgstr ""
+
+#: Template/Books/view.ctp:24
+msgid "Price"
+msgstr ""
+
+#: Template/Books/view.ctp:29
+msgid "Title"
+msgstr ""
+
+#: Template/Books/view.ctp:33
+msgid "Author"
+msgstr ""
+
+#: Template/Layout/error.ctp:35
+msgid "Error"
+msgstr ""
+
+#: Template/Layout/error.ctp:43
+msgid "Back"
+msgstr ""
+
+#: Template/People/add.ctp:10
+#: Template/People/edit.ctp:16
+#: Template/People/view.ctp:12
+msgid "List People"
+msgstr ""
+
+#: Template/People/add.ctp:16
+msgid "Add Person"
+msgstr ""
+
+#: Template/People/edit.ctp:22
+#: Template/People/view.ctp:10
+msgid "Edit Person"
+msgstr ""
+
+#: Template/People/index.ctp:10
+#: Template/People/view.ctp:13
+msgid "New Person"
+msgstr ""
+
+#: Template/People/index.ctp:14
+msgid "People"
+msgstr ""
+
+#: Template/People/view.ctp:11
+msgid "Delete Person"
+msgstr ""
+
+#: Template/People/view.ctp:20
+msgid "Name"
+msgstr ""
+
+#: Template/People/view.ctp:24
+msgid "Password"
+msgstr ""
+
+#: Template/People/view.ctp:33
+msgid "Comment"
+msgstr ""
+

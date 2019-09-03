@@ -262,7 +262,10 @@ class PrototypedArrayNodeTest extends TestCase
      *     ]
      * ]
      *
+<<<<<<< HEAD
      *
+=======
+>>>>>>> master
      * @dataProvider getDataForKeyRemovedLeftValueOnly
      */
     public function testMappedAttributeKeyIsRemovedLeftValueOnly($value, $children, $expected)

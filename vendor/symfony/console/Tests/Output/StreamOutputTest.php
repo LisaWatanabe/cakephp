@@ -19,12 +19,20 @@ class StreamOutputTest extends TestCase
 {
     protected $stream;
 
+<<<<<<< HEAD
     protected function setUp()
+=======
+    protected function setUp(): void
+>>>>>>> master
     {
         $this->stream = fopen('php://memory', 'a', false);
     }
 
+<<<<<<< HEAD
     protected function tearDown()
+=======
+    protected function tearDown(): void
+>>>>>>> master
     {
         $this->stream = null;
     }
@@ -36,12 +44,19 @@ class StreamOutputTest extends TestCase
         $this->assertTrue($output->isDecorated(), '__construct() takes the decorated flag as its second argument');
     }
 
+<<<<<<< HEAD
     /**
      * @expectedException        \InvalidArgumentException
      * @expectedExceptionMessage The StreamOutput class needs a stream as its first argument.
      */
     public function testStreamIsRequired()
     {
+=======
+    public function testStreamIsRequired()
+    {
+        $this->expectException('InvalidArgumentException');
+        $this->expectExceptionMessage('The StreamOutput class needs a stream as its first argument.');
+>>>>>>> master
         new StreamOutput('foo');
     }
 

@@ -38,14 +38,22 @@ class DumperTest extends TestCase
         ],
     ];
 
+<<<<<<< HEAD
     protected function setUp()
+=======
+    protected function setUp(): void
+>>>>>>> master
     {
         $this->parser = new Parser();
         $this->dumper = new Dumper();
         $this->path = __DIR__.'/Fixtures';
     }
 
+<<<<<<< HEAD
     protected function tearDown()
+=======
+    protected function tearDown(): void
+>>>>>>> master
     {
         $this->parser = null;
         $this->dumper = null;
@@ -192,11 +200,17 @@ EOF;
         $this->assertEquals('{ foo: null, bar: 1 }', $dump, '->dump() does not dump objects when disabled');
     }
 
+<<<<<<< HEAD
     /**
      * @expectedException \Symfony\Component\Yaml\Exception\DumpException
      */
     public function testObjectSupportDisabledWithExceptions()
     {
+=======
+    public function testObjectSupportDisabledWithExceptions()
+    {
+        $this->expectException('Symfony\Component\Yaml\Exception\DumpException');
+>>>>>>> master
         $this->dumper->dump(['foo' => new A(), 'bar' => 1], 0, 0, Yaml::DUMP_EXCEPTION_ON_INVALID_TYPE);
     }
 
@@ -493,6 +507,7 @@ YAML;
         $this->assertSame("- \"a\\r\\nb\\nc\"\n", $this->dumper->dump(["a\r\nb\nc"], 2, 0, Yaml::DUMP_MULTI_LINE_LITERAL_BLOCK));
     }
 
+<<<<<<< HEAD
     /**
      * @expectedException \InvalidArgumentException
      * @expectedExceptionMessage The indentation must be greater than zero
@@ -508,6 +523,19 @@ YAML;
      */
     public function testNegativeIndentationThrowsException()
     {
+=======
+    public function testZeroIndentationThrowsException()
+    {
+        $this->expectException('InvalidArgumentException');
+        $this->expectExceptionMessage('The indentation must be greater than zero');
+        new Dumper(0);
+    }
+
+    public function testNegativeIndentationThrowsException()
+    {
+        $this->expectException('InvalidArgumentException');
+        $this->expectExceptionMessage('The indentation must be greater than zero');
+>>>>>>> master
         new Dumper(-4);
     }
 }

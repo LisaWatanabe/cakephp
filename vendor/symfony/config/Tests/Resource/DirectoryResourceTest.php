@@ -18,7 +18,11 @@ class DirectoryResourceTest extends TestCase
 {
     protected $directory;
 
+<<<<<<< HEAD
     protected function setUp()
+=======
+    protected function setUp(): void
+>>>>>>> master
     {
         $this->directory = sys_get_temp_dir().\DIRECTORY_SEPARATOR.'symfonyDirectoryIterator';
         if (!file_exists($this->directory)) {
@@ -27,7 +31,11 @@ class DirectoryResourceTest extends TestCase
         touch($this->directory.'/tmp.xml');
     }
 
+<<<<<<< HEAD
     protected function tearDown()
+=======
+    protected function tearDown(): void
+>>>>>>> master
     {
         if (!is_dir($this->directory)) {
             return;
@@ -63,12 +71,19 @@ class DirectoryResourceTest extends TestCase
         $this->assertEquals('bar', $resource->getPattern());
     }
 
+<<<<<<< HEAD
     /**
      * @expectedException \InvalidArgumentException
      * @expectedExceptionMessageRegExp /The directory ".*" does not exist./
      */
     public function testResourceDoesNotExist()
     {
+=======
+    public function testResourceDoesNotExist()
+    {
+        $this->expectException('InvalidArgumentException');
+        $this->expectExceptionMessageRegExp('/The directory ".*" does not exist./');
+>>>>>>> master
         $resource = new DirectoryResource('/____foo/foobar'.mt_rand(1, 999999));
     }
 

@@ -220,6 +220,10 @@ class ConsoleOutput
      */
     protected function _replaceTags($matches)
     {
+<<<<<<< HEAD
+=======
+        /** @var array $style */
+>>>>>>> master
         $style = $this->styles($matches['tag']);
         if (empty($style)) {
             return '<' . $matches['tag'] . '>' . $matches['text'] . '</' . $matches['tag'] . '>';
@@ -239,7 +243,11 @@ class ConsoleOutput
             }
         }
 
+<<<<<<< HEAD
         return "\033[" . implode($styleInfo, ';') . 'm' . $matches['text'] . "\033[0m";
+=======
+        return "\033[" . implode(';', $styleInfo) . 'm' . $matches['text'] . "\033[0m";
+>>>>>>> master
     }
 
     /**
@@ -281,9 +289,15 @@ class ConsoleOutput
      * ```
      *
      * @param string|null $style The style to get or create.
+<<<<<<< HEAD
      * @param array|bool|null $definition The array definition of the style to change or create a style
      *   or false to remove a style.
      * @return mixed If you are getting styles, the style or null will be returned. If you are creating/modifying
+=======
+     * @param array|false|null $definition The array definition of the style to change or create a style
+     *   or false to remove a style.
+     * @return array|true|null If you are getting styles, the style or null will be returned. If you are creating/modifying
+>>>>>>> master
      *   styles true will be returned.
      */
     public function styles($style = null, $definition = null)

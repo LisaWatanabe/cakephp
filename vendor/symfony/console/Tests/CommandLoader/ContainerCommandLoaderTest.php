@@ -41,11 +41,17 @@ class ContainerCommandLoaderTest extends TestCase
         $this->assertInstanceOf(Command::class, $loader->get('bar'));
     }
 
+<<<<<<< HEAD
     /**
      * @expectedException \Symfony\Component\Console\Exception\CommandNotFoundException
      */
     public function testGetUnknownCommandThrows()
     {
+=======
+    public function testGetUnknownCommandThrows()
+    {
+        $this->expectException('Symfony\Component\Console\Exception\CommandNotFoundException');
+>>>>>>> master
         (new ContainerCommandLoader(new ServiceLocator([]), []))->get('unknown');
     }
 
