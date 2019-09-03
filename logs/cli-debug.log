@@ -1,0 +1,97 @@
+2019-09-02 07:38:51 Notice: Deprecated (16384): Declaring fixtures in underscored format in TestCase::$fixtures is deprecated.
+Found "app.boards" in "App\Test\TestCase\Controller\BoardsControllerTest". Expected "app.Boards" instead. - /Applications/MAMP/htdocs/cakephp/vendor/cakephp/cakephp/src/TestSuite/Fixture/FixtureManager.php, line: 103
+ You can disable deprecation warnings by setting `Error.errorLevel` to `E_ALL & ~E_USER_DEPRECATED` in your config/app.php. in [/Applications/MAMP/htdocs/cakephp/vendor/cakephp/cakephp/src/Core/functions.php, line 311]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 159
+deprecationWarning - CORE/src/Core/functions.php, line 311
+Cake\TestSuite\Fixture\FixtureManager::_loadFixtures() - CORE/src/TestSuite/Fixture/FixtureManager.php, line 226
+Cake\TestSuite\Fixture\FixtureManager::fixturize() - CORE/src/TestSuite/Fixture/FixtureManager.php, line 103
+Cake\TestSuite\Fixture\FixtureInjector::startTest() - CORE/src/TestSuite/Fixture/FixtureInjector.php, line 97
+PHPUnit\Framework\TestResult::startTest() - ROOT/vendor/phpunit/phpunit/src/Framework/TestResult.php, line 395
+PHPUnit\Framework\TestResult::run() - ROOT/vendor/phpunit/phpunit/src/Framework/TestResult.php, line 637
+PHPUnit\Framework\TestCase::run() - ROOT/vendor/phpunit/phpunit/src/Framework/TestCase.php, line 894
+PHPUnit\Framework\TestSuite::run() - ROOT/vendor/phpunit/phpunit/src/Framework/TestSuite.php, line 755
+PHPUnit\TextUI\TestRunner::doRun() - ROOT/vendor/phpunit/phpunit/src/TextUI/TestRunner.php, line 545
+PHPUnit\TextUI\Command::run() - ROOT/vendor/phpunit/phpunit/src/TextUI/Command.php, line 195
+PHPUnit\TextUI\Command::main() - ROOT/vendor/phpunit/phpunit/src/TextUI/Command.php, line 148
+[main] - ROOT/vendor/phpunit/phpunit/phpunit, line 53
+
+
+
+2019-09-02 07:38:51 Notice: Deprecated (16384): Declaring fixtures in underscored format in TestCase::$fixtures is deprecated.
+Found "app.people" in "App\Test\TestCase\Controller\BoardsControllerTest". Expected "app.People" instead. - /Applications/MAMP/htdocs/cakephp/vendor/cakephp/cakephp/src/TestSuite/Fixture/FixtureManager.php, line: 103
+ You can disable deprecation warnings by setting `Error.errorLevel` to `E_ALL & ~E_USER_DEPRECATED` in your config/app.php. in [/Applications/MAMP/htdocs/cakephp/vendor/cakephp/cakephp/src/Core/functions.php, line 311]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 159
+deprecationWarning - CORE/src/Core/functions.php, line 311
+Cake\TestSuite\Fixture\FixtureManager::_loadFixtures() - CORE/src/TestSuite/Fixture/FixtureManager.php, line 226
+Cake\TestSuite\Fixture\FixtureManager::fixturize() - CORE/src/TestSuite/Fixture/FixtureManager.php, line 103
+Cake\TestSuite\Fixture\FixtureInjector::startTest() - CORE/src/TestSuite/Fixture/FixtureInjector.php, line 97
+PHPUnit\Framework\TestResult::startTest() - ROOT/vendor/phpunit/phpunit/src/Framework/TestResult.php, line 395
+PHPUnit\Framework\TestResult::run() - ROOT/vendor/phpunit/phpunit/src/Framework/TestResult.php, line 637
+PHPUnit\Framework\TestCase::run() - ROOT/vendor/phpunit/phpunit/src/Framework/TestCase.php, line 894
+PHPUnit\Framework\TestSuite::run() - ROOT/vendor/phpunit/phpunit/src/Framework/TestSuite.php, line 755
+PHPUnit\TextUI\TestRunner::doRun() - ROOT/vendor/phpunit/phpunit/src/TextUI/TestRunner.php, line 545
+PHPUnit\TextUI\Command::run() - ROOT/vendor/phpunit/phpunit/src/TextUI/Command.php, line 195
+PHPUnit\TextUI\Command::main() - ROOT/vendor/phpunit/phpunit/src/TextUI/Command.php, line 148
+[main] - ROOT/vendor/phpunit/phpunit/phpunit, line 53
+
+
+
+2019-09-02 07:59:35 Notice: Deprecated (16384): Declaring fixtures in underscored format in TestCase::$fixtures is deprecated.
+Found "app.boards" in "App\Test\TestCase\Controller\BoardsControllerTest". Expected "app.Boards" instead. - /Applications/MAMP/htdocs/cakephp/vendor/cakephp/cakephp/src/TestSuite/Fixture/FixtureManager.php, line: 103
+ You can disable deprecation warnings by setting `Error.errorLevel` to `E_ALL & ~E_USER_DEPRECATED` in your config/app.php. in [/Applications/MAMP/htdocs/cakephp/vendor/cakephp/cakephp/src/Core/functions.php, line 311]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 159
+deprecationWarning - CORE/src/Core/functions.php, line 311
+Cake\TestSuite\Fixture\FixtureManager::_loadFixtures() - CORE/src/TestSuite/Fixture/FixtureManager.php, line 226
+Cake\TestSuite\Fixture\FixtureManager::fixturize() - CORE/src/TestSuite/Fixture/FixtureManager.php, line 103
+Cake\TestSuite\Fixture\FixtureInjector::startTest() - CORE/src/TestSuite/Fixture/FixtureInjector.php, line 97
+PHPUnit\Framework\TestResult::startTest() - ROOT/vendor/phpunit/phpunit/src/Framework/TestResult.php, line 395
+PHPUnit\Framework\TestResult::run() - ROOT/vendor/phpunit/phpunit/src/Framework/TestResult.php, line 637
+PHPUnit\Framework\TestCase::run() - ROOT/vendor/phpunit/phpunit/src/Framework/TestCase.php, line 894
+PHPUnit\Framework\TestSuite::run() - ROOT/vendor/phpunit/phpunit/src/Framework/TestSuite.php, line 755
+PHPUnit\TextUI\TestRunner::doRun() - ROOT/vendor/phpunit/phpunit/src/TextUI/TestRunner.php, line 545
+PHPUnit\TextUI\Command::run() - ROOT/vendor/phpunit/phpunit/src/TextUI/Command.php, line 195
+PHPUnit\TextUI\Command::main() - ROOT/vendor/phpunit/phpunit/src/TextUI/Command.php, line 148
+[main] - ROOT/vendor/phpunit/phpunit/phpunit, line 53
+
+
+
+2019-09-02 07:59:35 Notice: Deprecated (16384): Declaring fixtures in underscored format in TestCase::$fixtures is deprecated.
+Found "app.people" in "App\Test\TestCase\Controller\BoardsControllerTest". Expected "app.People" instead. - /Applications/MAMP/htdocs/cakephp/vendor/cakephp/cakephp/src/TestSuite/Fixture/FixtureManager.php, line: 103
+ You can disable deprecation warnings by setting `Error.errorLevel` to `E_ALL & ~E_USER_DEPRECATED` in your config/app.php. in [/Applications/MAMP/htdocs/cakephp/vendor/cakephp/cakephp/src/Core/functions.php, line 311]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 159
+deprecationWarning - CORE/src/Core/functions.php, line 311
+Cake\TestSuite\Fixture\FixtureManager::_loadFixtures() - CORE/src/TestSuite/Fixture/FixtureManager.php, line 226
+Cake\TestSuite\Fixture\FixtureManager::fixturize() - CORE/src/TestSuite/Fixture/FixtureManager.php, line 103
+Cake\TestSuite\Fixture\FixtureInjector::startTest() - CORE/src/TestSuite/Fixture/FixtureInjector.php, line 97
+PHPUnit\Framework\TestResult::startTest() - ROOT/vendor/phpunit/phpunit/src/Framework/TestResult.php, line 395
+PHPUnit\Framework\TestResult::run() - ROOT/vendor/phpunit/phpunit/src/Framework/TestResult.php, line 637
+PHPUnit\Framework\TestCase::run() - ROOT/vendor/phpunit/phpunit/src/Framework/TestCase.php, line 894
+PHPUnit\Framework\TestSuite::run() - ROOT/vendor/phpunit/phpunit/src/Framework/TestSuite.php, line 755
+PHPUnit\TextUI\TestRunner::doRun() - ROOT/vendor/phpunit/phpunit/src/TextUI/TestRunner.php, line 545
+PHPUnit\TextUI\Command::run() - ROOT/vendor/phpunit/phpunit/src/TextUI/Command.php, line 195
+PHPUnit\TextUI\Command::main() - ROOT/vendor/phpunit/phpunit/src/TextUI/Command.php, line 148
+[main] - ROOT/vendor/phpunit/phpunit/phpunit, line 53
+
+
+
+2019-09-03 05:41:37 Notice: Deprecated (16384): RouteBuilder::extensions() is deprecated. Use RouteBuilder::setExtensions()/getExtensions() instead. - /Applications/MAMP/htdocs/cakephp/config/routes.php, line: 53
+ You can disable deprecation warnings by setting `Error.errorLevel` to `E_ALL & ~E_USER_DEPRECATED` in your config/app.php. in [/Applications/MAMP/htdocs/cakephp/vendor/cakephp/cakephp/src/Core/functions.php, line 311]
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 159
+deprecationWarning - CORE/src/Core/functions.php, line 311
+Cake\Routing\RouteBuilder::extensions() - CORE/src/Routing/RouteBuilder.php, line 202
+Cake\Http\BaseApplication::{closure}() - ROOT/config/routes.php, line 53
+Cake\Routing\RouteBuilder::scope() - CORE/src/Routing/RouteBuilder.php, line 1009
+Cake\Routing\Router::scope() - CORE/src/Routing/Router.php, line 1098
+require - ROOT/config/routes.php, line 92
+Cake\Http\BaseApplication::routes() - CORE/src/Http/BaseApplication.php, line 179
+Cake\Console\CommandRunner::loadRoutes() - CORE/src/Console/CommandRunner.php, line 420
+Cake\Console\CommandRunner::run() - CORE/src/Console/CommandRunner.php, line 146
+[main] - ROOT/bin/cake.php, line 12
+
+
+
