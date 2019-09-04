@@ -2,31 +2,14 @@
 namespace App\Controller;
 	use Cake\ORM\TableRegistry;
 	use Cake\Validation\Validator;
-<<<<<<< HEAD
-	// use Cake\Exception;
-	// use Cake\Log\Log;
-	// use Cake\Datasource\ConnectionManager;
-=======
 	use Cake\I18n\I18n;
-	// use Cake\Controller\Component;
->>>>>>> master
+	use Cake\Controller\Component;
+	use Cake\Event\Event;
+
 
 class BoardsController extends AppController {
 	private $people;
 
-<<<<<<< HEAD
-	public function initialize(){
-		parent::initialize();
-		$this->people = TableRegistry::get('People');
-	}
-	public function index(){
-		$data = $this->Boards
-		->find('all')
-		->order(['Boards.id'=>'DESC'])
-		->contain('People');
-		$this->set('data',$data);
-	}
-=======
 	public $paginate = [
 		'limit' => 5,
 		'order' => ['id' => 'DESC'],
@@ -37,26 +20,19 @@ class BoardsController extends AppController {
 		$this->people = TableRegistry::get('People');
 		$this->loadComponent('Paginator');
 		$this->loadComponent('RequestHandler');
+		$this->loadComponent('DataArray');
 		// $this->loadComponent('Flash');
 	}
+	public function beforeFilter(Event $event) {
+        parent::beforeFilter($event);
+        I18n::locale('ja');
+        $this->Auth->allow(['add','login', 'show','index']);
+    }
 	public function index(){
-		$data = $this->paginate($this->Boards);
-		$this->set('data',$data);
-		// $this->Flash->set('メッセージを表示',
-		// [
-		// 	'element' =>'info',
-		// 	'key' => 'info'
-		// ]);
+		$data = $this->Boards->find('all');
+		// $data = $this->paginate($this->Boards);
+		$this->set(compact('data'));
 	}
-		// if ($this->RequestHandler->isRss()){
-		// 	$data = $this->Boards
-		// 	->find()
-		// 	->limit(10)
-		// 	->order(['id' => 'DESC']);
-		// 	$this->set(compact('data'));
-		// } else {
-		// $this->set('count',$data->count());
->>>>>>> master
 	public function add(){
 		if($this->request->isPost()){
 			if(!$this->people->checkNameAndPass($this->request->data)){

@@ -37,20 +37,11 @@ class InputArgumentTest extends TestCase
         $this->assertTrue($argument->isRequired(), '__construct() can take "InputArgument::REQUIRED" as its mode');
     }
 
-<<<<<<< HEAD
-    /**
-     * @expectedException        \InvalidArgumentException
-     * @expectedExceptionMessage Argument mode "-1" is not valid.
-     */
-    public function testInvalidModes()
-    {
-=======
     public function testInvalidModes()
     {
         $this->expectException('InvalidArgumentException');
         $this->expectExceptionMessage('Argument mode "-1" is not valid.');
 
->>>>>>> master
         new InputArgument('foo', '-1');
     }
 
@@ -89,36 +80,18 @@ class InputArgumentTest extends TestCase
         $this->assertEquals([1, 2], $argument->getDefault(), '->setDefault() changes the default value');
     }
 
-<<<<<<< HEAD
-    /**
-     * @expectedException        \LogicException
-     * @expectedExceptionMessage Cannot set a default value except for InputArgument::OPTIONAL mode.
-     */
-    public function testSetDefaultWithRequiredArgument()
-    {
-=======
     public function testSetDefaultWithRequiredArgument()
     {
         $this->expectException('LogicException');
         $this->expectExceptionMessage('Cannot set a default value except for InputArgument::OPTIONAL mode.');
->>>>>>> master
         $argument = new InputArgument('foo', InputArgument::REQUIRED);
         $argument->setDefault('default');
     }
 
-<<<<<<< HEAD
-    /**
-     * @expectedException        \LogicException
-     * @expectedExceptionMessage A default value for an array argument must be an array.
-     */
-    public function testSetDefaultWithArrayArgument()
-    {
-=======
     public function testSetDefaultWithArrayArgument()
     {
         $this->expectException('LogicException');
         $this->expectExceptionMessage('A default value for an array argument must be an array.');
->>>>>>> master
         $argument = new InputArgument('foo', InputArgument::IS_ARRAY);
         $argument->setDefault('default');
     }

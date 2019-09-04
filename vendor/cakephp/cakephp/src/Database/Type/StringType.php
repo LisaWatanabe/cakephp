@@ -84,11 +84,7 @@ class StringType extends Type implements OptionalConvertInterface, TypeInterface
     }
 
     /**
-<<<<<<< HEAD
-     * Marshalls request data into PHP strings.
-=======
      * Marshals request data into PHP strings.
->>>>>>> master
      *
      * @param mixed $value The value to convert.
      * @return string|null Converted value.

@@ -19,21 +19,13 @@ class TerminalTest extends TestCase
     private $colSize;
     private $lineSize;
 
-<<<<<<< HEAD
-    protected function setUp()
-=======
     protected function setUp(): void
->>>>>>> master
     {
         $this->colSize = getenv('COLUMNS');
         $this->lineSize = getenv('LINES');
     }
 
-<<<<<<< HEAD
-    protected function tearDown()
-=======
     protected function tearDown(): void
->>>>>>> master
     {
         putenv($this->colSize ? 'COLUMNS='.$this->colSize : 'COLUMNS');
         putenv($this->lineSize ? 'LINES' : 'LINES='.$this->lineSize);

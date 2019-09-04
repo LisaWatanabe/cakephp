@@ -39,11 +39,7 @@ class DateTimeWidget implements WidgetInterface
     /**
      * List of inputs that can be rendered
      *
-<<<<<<< HEAD
-     * @var array
-=======
      * @var string[]
->>>>>>> master
      */
     protected $_selects = [
         'year',

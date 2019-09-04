@@ -3,10 +3,7 @@
 namespace PhpParser\Node\Stmt;
 
 use PhpParser\Node;
-<<<<<<< HEAD
-=======
 use PhpParser\Node\Scalar\String_;
->>>>>>> master
 
 class InterfaceTest extends \PHPUnit\Framework\TestCase
 {
@@ -15,11 +12,7 @@ class InterfaceTest extends \PHPUnit\Framework\TestCase
             new ClassMethod('foo'),
             new ClassMethod('bar'),
         ];
-<<<<<<< HEAD
-        $interface = new Class_('Foo', [
-=======
         $interface = new Interface_('Foo', [
->>>>>>> master
             'stmts' => [
                 new Node\Stmt\ClassConst([new Node\Const_('C1', new Node\Scalar\String_('C1'))]),
                 $methods[0],
@@ -31,8 +24,6 @@ class InterfaceTest extends \PHPUnit\Framework\TestCase
 
         $this->assertSame($methods, $interface->getMethods());
     }
-<<<<<<< HEAD
-=======
 
     public function testGetConstants() {
         $constants = [
@@ -50,5 +41,4 @@ class InterfaceTest extends \PHPUnit\Framework\TestCase
 
         $this->assertSame($constants, $class->getConstants());
     }
->>>>>>> master
 }

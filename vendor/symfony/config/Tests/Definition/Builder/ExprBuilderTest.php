@@ -164,17 +164,9 @@ class ExprBuilderTest extends TestCase
         yield [['value'], ['value']];
     }
 
-<<<<<<< HEAD
-    /**
-     * @expectedException \Symfony\Component\Config\Definition\Exception\InvalidConfigurationException
-     */
-    public function testThenInvalid()
-    {
-=======
     public function testThenInvalid()
     {
         $this->expectException('Symfony\Component\Config\Definition\Exception\InvalidConfigurationException');
->>>>>>> master
         $test = $this->getTestBuilder()
             ->ifString()
             ->thenInvalid('Invalid value')
@@ -191,23 +183,6 @@ class ExprBuilderTest extends TestCase
         $this->assertEquals([], $this->finalizeTestBuilder($test));
     }
 
-<<<<<<< HEAD
-    /**
-     * @expectedException \RuntimeException
-     * @expectedExceptionMessage You must specify an if part.
-     */
-    public function testEndIfPartNotSpecified()
-    {
-        $this->getTestBuilder()->end();
-    }
-
-    /**
-     * @expectedException \RuntimeException
-     * @expectedExceptionMessage You must specify a then part.
-     */
-    public function testEndThenPartNotSpecified()
-    {
-=======
     public function testEndIfPartNotSpecified()
     {
         $this->expectException('RuntimeException');
@@ -219,7 +194,6 @@ class ExprBuilderTest extends TestCase
     {
         $this->expectException('RuntimeException');
         $this->expectExceptionMessage('You must specify a then part.');
->>>>>>> master
         $builder = $this->getTestBuilder();
         $builder->ifPart = 'test';
         $builder->end();

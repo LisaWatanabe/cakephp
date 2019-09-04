@@ -110,11 +110,6 @@ class Parser
 
     /**
      * @internal
-<<<<<<< HEAD
-     *
-     * @return int
-=======
->>>>>>> master
      */
     public function getLastLineNumberBeforeDeprecation(): int
     {
@@ -389,12 +384,9 @@ class Parser
                     $value = '';
 
                     foreach ($this->lines as $line) {
-<<<<<<< HEAD
-=======
                         if ('' !== ltrim($line) && '#' === ltrim($line)[0]) {
                             continue;
                         }
->>>>>>> master
                         // If the indentation is not consistent at offset 0, it is to be considered as a ParseError
                         if (0 === $this->offset && !$deprecatedUsage && isset($line[0]) && ' ' === $line[0]) {
                             throw new ParseException('Unable to parse.', $this->getRealCurrentLineNb() + 1, $this->currentLine, $this->filename);
@@ -520,20 +512,12 @@ class Parser
      *
      * @throws ParseException When indentation problem are detected
      */
-<<<<<<< HEAD
-    private function getNextEmbedBlock(int $indentation = null, bool $inSequence = false): ?string
-=======
     private function getNextEmbedBlock(int $indentation = null, bool $inSequence = false): string
->>>>>>> master
     {
         $oldLineIndentation = $this->getCurrentLineIndentation();
 
         if (!$this->moveToNextLine()) {
-<<<<<<< HEAD
-            return null;
-=======
             return '';
->>>>>>> master
         }
 
         if (null === $indentation) {
@@ -576,11 +560,7 @@ class Parser
         } else {
             $this->moveToPreviousLine();
 
-<<<<<<< HEAD
-            return null;
-=======
             return '';
->>>>>>> master
         }
 
         if ($inSequence && $oldLineIndentation === $newIndent && isset($data[0][0]) && '-' === $data[0][0]) {
@@ -588,11 +568,7 @@ class Parser
             // and therefore no nested list or mapping
             $this->moveToPreviousLine();
 
-<<<<<<< HEAD
-            return null;
-=======
             return '';
->>>>>>> master
         }
 
         $isItUnindentedCollection = $this->isStringUnIndentedCollectionItem();
@@ -628,11 +604,6 @@ class Parser
 
     /**
      * Moves the parser to the next line.
-<<<<<<< HEAD
-     *
-     * @return bool
-=======
->>>>>>> master
      */
     private function moveToNextLine(): bool
     {
@@ -647,11 +618,6 @@ class Parser
 
     /**
      * Moves the parser to the previous line.
-<<<<<<< HEAD
-     *
-     * @return bool
-=======
->>>>>>> master
      */
     private function moveToPreviousLine(): bool
     {
@@ -698,11 +664,7 @@ class Parser
         if (\in_array($value[0], ['!', '|', '>'], true) && self::preg_match('/^(?:'.self::TAG_PATTERN.' +)?'.self::BLOCK_SCALAR_HEADER_PATTERN.'$/', $value, $matches)) {
             $modifiers = isset($matches['modifiers']) ? $matches['modifiers'] : '';
 
-<<<<<<< HEAD
-            $data = $this->parseBlockScalar($matches['separator'], preg_replace('#\d+#', '', $modifiers), (int) abs($modifiers));
-=======
             $data = $this->parseBlockScalar($matches['separator'], preg_replace('#\d+#', '', $modifiers), (int) abs((int) $modifiers));
->>>>>>> master
 
             if ('' !== $matches['tag'] && '!' !== $matches['tag']) {
                 if ('!!binary' === $matches['tag']) {
@@ -777,11 +739,6 @@ class Parser
      * @param string $style       The style indicator that was used to begin this block scalar (| or >)
      * @param string $chomping    The chomping indicator that was used to begin this block scalar (+ or -)
      * @param int    $indentation The indentation indicator that was used to begin this block scalar
-<<<<<<< HEAD
-     *
-     * @return string The text value
-=======
->>>>>>> master
      */
     private function parseBlockScalar(string $style, string $chomping = '', int $indentation = 0): string
     {

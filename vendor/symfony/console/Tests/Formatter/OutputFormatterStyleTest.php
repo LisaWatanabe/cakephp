@@ -86,11 +86,7 @@ class OutputFormatterStyleTest extends TestCase
             $this->fail('->setOption() throws an \InvalidArgumentException when the option does not exist in the available options');
         } catch (\Exception $e) {
             $this->assertInstanceOf('\InvalidArgumentException', $e, '->setOption() throws an \InvalidArgumentException when the option does not exist in the available options');
-<<<<<<< HEAD
-            $this->assertContains('Invalid option specified: "foo"', $e->getMessage(), '->setOption() throws an \InvalidArgumentException when the option does not exist in the available options');
-=======
             $this->assertStringContainsString('Invalid option specified: "foo"', $e->getMessage(), '->setOption() throws an \InvalidArgumentException when the option does not exist in the available options');
->>>>>>> master
         }
 
         try {
@@ -98,11 +94,7 @@ class OutputFormatterStyleTest extends TestCase
             $this->fail('->unsetOption() throws an \InvalidArgumentException when the option does not exist in the available options');
         } catch (\Exception $e) {
             $this->assertInstanceOf('\InvalidArgumentException', $e, '->unsetOption() throws an \InvalidArgumentException when the option does not exist in the available options');
-<<<<<<< HEAD
-            $this->assertContains('Invalid option specified: "foo"', $e->getMessage(), '->unsetOption() throws an \InvalidArgumentException when the option does not exist in the available options');
-=======
             $this->assertStringContainsString('Invalid option specified: "foo"', $e->getMessage(), '->unsetOption() throws an \InvalidArgumentException when the option does not exist in the available options');
->>>>>>> master
         }
     }
 

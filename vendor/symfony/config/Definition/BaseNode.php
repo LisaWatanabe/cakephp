@@ -97,49 +97,37 @@ abstract class BaseNode implements NodeInterface
         self::$placeholders = [];
     }
 
-<<<<<<< HEAD
-=======
     /**
      * @param string $key
      */
->>>>>>> master
     public function setAttribute($key, $value)
     {
         $this->attributes[$key] = $value;
     }
 
-<<<<<<< HEAD
-=======
     /**
      * @param string $key
      *
      * @return mixed
      */
->>>>>>> master
     public function getAttribute($key, $default = null)
     {
         return isset($this->attributes[$key]) ? $this->attributes[$key] : $default;
     }
 
-<<<<<<< HEAD
-=======
     /**
      * @param string $key
      *
      * @return bool
      */
->>>>>>> master
     public function hasAttribute($key)
     {
         return isset($this->attributes[$key]);
     }
 
-<<<<<<< HEAD
-=======
     /**
      * @return array
      */
->>>>>>> master
     public function getAttributes()
     {
         return $this->attributes;
@@ -150,12 +138,9 @@ abstract class BaseNode implements NodeInterface
         $this->attributes = $attributes;
     }
 
-<<<<<<< HEAD
-=======
     /**
      * @param string $key
      */
->>>>>>> master
     public function removeAttribute($key)
     {
         unset($this->attributes[$key]);
@@ -174,11 +159,7 @@ abstract class BaseNode implements NodeInterface
     /**
      * Returns info message.
      *
-<<<<<<< HEAD
-     * @return string The info text
-=======
      * @return string|null The info text
->>>>>>> master
      */
     public function getInfo()
     {
@@ -198,11 +179,7 @@ abstract class BaseNode implements NodeInterface
     /**
      * Retrieves the example configuration for this node.
      *
-<<<<<<< HEAD
-     * @return string|array The example
-=======
      * @return string|array|null The example
->>>>>>> master
      */
     public function getExample()
     {
@@ -408,15 +385,9 @@ abstract class BaseNode implements NodeInterface
     /**
      * Normalizes the value before any other normalization is applied.
      *
-<<<<<<< HEAD
-     * @param $value
-     *
-     * @return The normalized array value
-=======
      * @param mixed $value
      *
      * @return mixed The normalized array value
->>>>>>> master
      */
     protected function preNormalize($value)
     {

@@ -2,11 +2,8 @@
 
 namespace PhpParser\Node\Stmt;
 
-<<<<<<< HEAD
-=======
 use PhpParser\Node\Scalar\String_;
 
->>>>>>> master
 class ClassTest extends \PHPUnit\Framework\TestCase
 {
     public function testIsAbstract() {
@@ -25,8 +22,6 @@ class ClassTest extends \PHPUnit\Framework\TestCase
         $this->assertFalse($class->isFinal());
     }
 
-<<<<<<< HEAD
-=======
     public function testGetTraitUses() {
         $traitUses = [
             new TraitUse([new Trait_('foo')]),
@@ -43,7 +38,6 @@ class ClassTest extends \PHPUnit\Framework\TestCase
         $this->assertSame($traitUses, $class->getTraitUses());
     }
 
->>>>>>> master
     public function testGetMethods() {
         $methods = [
             new ClassMethod('foo'),
@@ -64,8 +58,6 @@ class ClassTest extends \PHPUnit\Framework\TestCase
         $this->assertSame($methods, $class->getMethods());
     }
 
-<<<<<<< HEAD
-=======
     public function testGetConstants() {
         $constants = [
             new ClassConst([new \PhpParser\Node\Const_('foo', new String_('foo_value'))]),
@@ -102,7 +94,6 @@ class ClassTest extends \PHPUnit\Framework\TestCase
         $this->assertSame($properties, $class->getProperties());
     }
 
->>>>>>> master
     public function testGetMethod() {
         $methodConstruct = new ClassMethod('__CONSTRUCT');
         $methodTest = new ClassMethod('test');

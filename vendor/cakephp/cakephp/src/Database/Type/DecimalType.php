@@ -70,11 +70,7 @@ class DecimalType extends Type implements TypeInterface, BatchCastingInterface
     /**
      * Convert integer data into the database format.
      *
-<<<<<<< HEAD
-     * @param string|int|float $value The value to convert.
-=======
      * @param mixed $value The value to convert.
->>>>>>> master
      * @param \Cake\Database\Driver $driver The driver instance to convert with.
      * @return string|null
      * @throws \InvalidArgumentException
@@ -100,16 +96,9 @@ class DecimalType extends Type implements TypeInterface, BatchCastingInterface
     /**
      * Convert float values to PHP floats
      *
-<<<<<<< HEAD
-     * @param null|string|resource $value The value to convert.
-     * @param \Cake\Database\Driver $driver The driver instance to convert with.
-     * @return float|null
-     * @throws \Cake\Core\Exception\Exception
-=======
      * @param mixed $value The value to convert.
      * @param \Cake\Database\Driver $driver The driver instance to convert with.
      * @return float|null
->>>>>>> master
      */
     public function toPHP($value, Driver $driver)
     {
@@ -123,11 +112,7 @@ class DecimalType extends Type implements TypeInterface, BatchCastingInterface
     /**
      * {@inheritDoc}
      *
-<<<<<<< HEAD
-     * @return array
-=======
      * @return float[]
->>>>>>> master
      */
     public function manyToPHP(array $values, array $fields, Driver $driver)
     {
@@ -155,17 +140,10 @@ class DecimalType extends Type implements TypeInterface, BatchCastingInterface
     }
 
     /**
-<<<<<<< HEAD
-     * Marshalls request data into PHP floats.
-     *
-     * @param mixed $value The value to convert.
-     * @return mixed Converted value.
-=======
      * Marshals request data into PHP floats.
      *
      * @param mixed $value The value to convert.
      * @return float|string|null Converted value.
->>>>>>> master
      */
     public function marshal($value)
     {
@@ -191,10 +169,7 @@ class DecimalType extends Type implements TypeInterface, BatchCastingInterface
      *
      * @param bool $enable Whether or not to enable
      * @return $this
-<<<<<<< HEAD
-=======
      * @throws \RuntimeException
->>>>>>> master
      */
     public function useLocaleParser($enable = true)
     {

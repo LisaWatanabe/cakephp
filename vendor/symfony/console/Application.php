@@ -20,10 +20,6 @@ use Symfony\Component\Console\Event\ConsoleErrorEvent;
 use Symfony\Component\Console\Event\ConsoleTerminateEvent;
 use Symfony\Component\Console\Exception\CommandNotFoundException;
 use Symfony\Component\Console\Exception\ExceptionInterface;
-<<<<<<< HEAD
-use Symfony\Component\Console\Exception\LogicException;
-=======
->>>>>>> master
 use Symfony\Component\Console\Exception\NamespaceNotFoundException;
 use Symfony\Component\Console\Formatter\OutputFormatter;
 use Symfony\Component\Console\Helper\DebugFormatterHelper;
@@ -475,24 +471,11 @@ class Application
         if (!$command->isEnabled()) {
             $command->setApplication(null);
 
-<<<<<<< HEAD
-            return;
-        }
-
-        if (null === $command->getDefinition()) {
-            throw new LogicException(sprintf('Command class "%s" is not correctly initialized. You probably forgot to call the parent constructor.', \get_class($command)));
-        }
-
-        if (!$command->getName()) {
-            throw new LogicException(sprintf('The command defined in "%s" cannot have an empty name.', \get_class($command)));
-        }
-=======
             return null;
         }
 
         // Will throw if the command is not correctly initialized.
         $command->getDefinition();
->>>>>>> master
 
         $this->commands[$command->getName()] = $command;
 
@@ -842,19 +825,11 @@ class Application
                 for ($i = 0, $count = \count($trace); $i < $count; ++$i) {
                     $class = isset($trace[$i]['class']) ? $trace[$i]['class'] : '';
                     $type = isset($trace[$i]['type']) ? $trace[$i]['type'] : '';
-<<<<<<< HEAD
-                    $function = $trace[$i]['function'];
-                    $file = isset($trace[$i]['file']) ? $trace[$i]['file'] : 'n/a';
-                    $line = isset($trace[$i]['line']) ? $trace[$i]['line'] : 'n/a';
-
-                    $output->writeln(sprintf(' %s%s%s() at <info>%s:%s</info>', $class, $type, $function, $file, $line), OutputInterface::VERBOSITY_QUIET);
-=======
                     $function = isset($trace[$i]['function']) ? $trace[$i]['function'] : '';
                     $file = isset($trace[$i]['file']) ? $trace[$i]['file'] : 'n/a';
                     $line = isset($trace[$i]['line']) ? $trace[$i]['line'] : 'n/a';
 
                     $output->writeln(sprintf(' %s%s at <info>%s:%s</info>', $class, $function ? $type.$function.'()' : '', $file, $line), OutputInterface::VERBOSITY_QUIET);
->>>>>>> master
                 }
 
                 $output->writeln('', OutputInterface::VERBOSITY_QUIET);
@@ -982,11 +957,7 @@ class Application
     /**
      * Gets the name of the command based on input.
      *
-<<<<<<< HEAD
-     * @return string The command name
-=======
      * @return string|null
->>>>>>> master
      */
     protected function getCommandName(InputInterface $input)
     {

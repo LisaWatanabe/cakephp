@@ -22,11 +22,7 @@ use Symfony\Component\Console\Output\OutputInterface;
  *
  * @author Kévin Dunglas <dunglas@gmail.com>
  *
-<<<<<<< HEAD
- * @see http://www.php-fig.org/psr/psr-3/
-=======
  * @see https://www.php-fig.org/psr/psr-3/
->>>>>>> master
  */
 class ConsoleLogger extends AbstractLogger
 {

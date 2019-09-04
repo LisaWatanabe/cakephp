@@ -35,11 +35,7 @@ trait StringTemplateTrait
     /**
      * Sets templates to use.
      *
-<<<<<<< HEAD
-     * @param array $templates Templates to be added.
-=======
      * @param string[] $templates Templates to be added.
->>>>>>> master
      * @return $this
      */
     public function setTemplates(array $templates)

@@ -352,11 +352,6 @@ abstract class NodeDefinition implements NodeParentInterface
     /**
      * Set PathSeparator to use.
      *
-<<<<<<< HEAD
-     * @param string $separator
-     *
-=======
->>>>>>> master
      * @return $this
      */
     public function setPathSeparator(string $separator)
@@ -367,11 +362,7 @@ abstract class NodeDefinition implements NodeParentInterface
                     $child->setPathSeparator($separator);
                 }
             } else {
-<<<<<<< HEAD
-                @trigger_error('Passing a ParentNodeDefinitionInterface without getChildNodeDefinitions() is deprecated since Symfony 4.1.', E_USER_DEPRECATED);
-=======
                 @trigger_error(sprintf('Not implementing the "%s::getChildNodeDefinitions()" method in "%s" is deprecated since Symfony 4.1.', ParentNodeDefinitionInterface::class, \get_class($this)), E_USER_DEPRECATED);
->>>>>>> master
             }
         }
 

@@ -34,11 +34,7 @@ class Data implements \ArrayAccess, \Countable, \IteratorAggregate
     }
 
     /**
-<<<<<<< HEAD
-     * @return string The type of the value
-=======
      * @return string|null The type of the value
->>>>>>> master
      */
     public function getType()
     {
@@ -62,19 +58,12 @@ class Data implements \ArrayAccess, \Countable, \IteratorAggregate
         if (Stub::TYPE_RESOURCE === $item->type) {
             return $item->class.' resource';
         }
-<<<<<<< HEAD
-    }
-
-    /**
-     * @param bool $recursive Whether values should be resolved recursively or not
-=======
 
         return null;
     }
 
     /**
      * @param array|bool $recursive Whether values should be resolved recursively or not
->>>>>>> master
      *
      * @return string|int|float|bool|array|Data[]|null A native representation of the original value
      */
@@ -138,11 +127,8 @@ class Data implements \ArrayAccess, \Countable, \IteratorAggregate
 
             return $item instanceof Stub || [] === $item ? $data : $item;
         }
-<<<<<<< HEAD
-=======
 
         return null;
->>>>>>> master
     }
 
     public function __isset($key)
@@ -186,11 +172,7 @@ class Data implements \ArrayAccess, \Countable, \IteratorAggregate
      *
      * @param int $maxDepth The max dumped depth level
      *
-<<<<<<< HEAD
-     * @return self A clone of $this
-=======
      * @return static
->>>>>>> master
      */
     public function withMaxDepth($maxDepth)
     {
@@ -205,11 +187,7 @@ class Data implements \ArrayAccess, \Countable, \IteratorAggregate
      *
      * @param int $maxItemsPerDepth The max number of items dumped per depth level
      *
-<<<<<<< HEAD
-     * @return self A clone of $this
-=======
      * @return static
->>>>>>> master
      */
     public function withMaxItemsPerDepth($maxItemsPerDepth)
     {
@@ -224,11 +202,7 @@ class Data implements \ArrayAccess, \Countable, \IteratorAggregate
      *
      * @param bool $useRefHandles False to hide global ref. handles
      *
-<<<<<<< HEAD
-     * @return self A clone of $this
-=======
      * @return static
->>>>>>> master
      */
     public function withRefHandles($useRefHandles)
     {
@@ -243,11 +217,7 @@ class Data implements \ArrayAccess, \Countable, \IteratorAggregate
      *
      * @param string|int $key The key to seek to
      *
-<<<<<<< HEAD
-     * @return self|null A clone of $this or null if the key is not set
-=======
      * @return static|null Null if the key is not set
->>>>>>> master
      */
     public function seek($key)
     {
@@ -257,11 +227,7 @@ class Data implements \ArrayAccess, \Countable, \IteratorAggregate
             $item = $item->value;
         }
         if (!($item = $this->getStub($item)) instanceof Stub || !$item->position) {
-<<<<<<< HEAD
-            return;
-=======
             return null;
->>>>>>> master
         }
         $keys = [$key];
 
@@ -276,11 +242,7 @@ class Data implements \ArrayAccess, \Countable, \IteratorAggregate
             case Stub::TYPE_RESOURCE:
                 break;
             default:
-<<<<<<< HEAD
-                return;
-=======
                 return null;
->>>>>>> master
         }
 
         $data = null;

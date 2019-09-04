@@ -29,34 +29,18 @@ class FilesystemTest extends FilesystemTestCase
         $this->assertStringEqualsFile($targetFilePath, 'SOURCE FILE');
     }
 
-<<<<<<< HEAD
-    /**
-     * @expectedException \Symfony\Component\Filesystem\Exception\IOException
-     */
-    public function testCopyFails()
-    {
-=======
     public function testCopyFails()
     {
         $this->expectException('Symfony\Component\Filesystem\Exception\IOException');
->>>>>>> master
         $sourceFilePath = $this->workspace.\DIRECTORY_SEPARATOR.'copy_source_file';
         $targetFilePath = $this->workspace.\DIRECTORY_SEPARATOR.'copy_target_file';
 
         $this->filesystem->copy($sourceFilePath, $targetFilePath);
     }
 
-<<<<<<< HEAD
-    /**
-     * @expectedException \Symfony\Component\Filesystem\Exception\IOException
-     */
-    public function testCopyUnreadableFileFails()
-    {
-=======
     public function testCopyUnreadableFileFails()
     {
         $this->expectException('Symfony\Component\Filesystem\Exception\IOException');
->>>>>>> master
         // skip test on Windows; PHP can't easily set file as unreadable on Windows
         if ('\\' === \DIRECTORY_SEPARATOR) {
             $this->markTestSkipped('This test cannot run on Windows.');
@@ -130,17 +114,9 @@ class FilesystemTest extends FilesystemTestCase
         $this->assertStringEqualsFile($targetFilePath, 'SOURCE FILE');
     }
 
-<<<<<<< HEAD
-    /**
-     * @expectedException \Symfony\Component\Filesystem\Exception\IOException
-     */
-    public function testCopyWithOverrideWithReadOnlyTargetFails()
-    {
-=======
     public function testCopyWithOverrideWithReadOnlyTargetFails()
     {
         $this->expectException('Symfony\Component\Filesystem\Exception\IOException');
->>>>>>> master
         // skip test on Windows; PHP can't easily set file as unwritable on Windows
         if ('\\' === \DIRECTORY_SEPARATOR) {
             $this->markTestSkipped('This test cannot run on Windows.');
@@ -177,11 +153,7 @@ class FilesystemTest extends FilesystemTestCase
 
         $this->filesystem->copy($sourceFilePath, $targetFilePath);
 
-<<<<<<< HEAD
-        $this->assertTrue(is_dir($targetFileDirectory));
-=======
         $this->assertDirectoryExists($targetFileDirectory);
->>>>>>> master
         $this->assertFileExists($targetFilePath);
         $this->assertStringEqualsFile($targetFilePath, 'SOURCE FILE');
     }
@@ -213,11 +185,7 @@ class FilesystemTest extends FilesystemTestCase
 
         $this->filesystem->mkdir($directory);
 
-<<<<<<< HEAD
-        $this->assertTrue(is_dir($directory));
-=======
         $this->assertDirectoryExists($directory);
->>>>>>> master
     }
 
     public function testMkdirCreatesDirectoriesFromArray()
@@ -229,15 +197,9 @@ class FilesystemTest extends FilesystemTestCase
 
         $this->filesystem->mkdir($directories);
 
-<<<<<<< HEAD
-        $this->assertTrue(is_dir($basePath.'1'));
-        $this->assertTrue(is_dir($basePath.'2'));
-        $this->assertTrue(is_dir($basePath.'3'));
-=======
         $this->assertDirectoryExists($basePath.'1');
         $this->assertDirectoryExists($basePath.'2');
         $this->assertDirectoryExists($basePath.'3');
->>>>>>> master
     }
 
     public function testMkdirCreatesDirectoriesFromTraversableObject()
@@ -249,18 +211,6 @@ class FilesystemTest extends FilesystemTestCase
 
         $this->filesystem->mkdir($directories);
 
-<<<<<<< HEAD
-        $this->assertTrue(is_dir($basePath.'1'));
-        $this->assertTrue(is_dir($basePath.'2'));
-        $this->assertTrue(is_dir($basePath.'3'));
-    }
-
-    /**
-     * @expectedException \Symfony\Component\Filesystem\Exception\IOException
-     */
-    public function testMkdirCreatesDirectoriesFails()
-    {
-=======
         $this->assertDirectoryExists($basePath.'1');
         $this->assertDirectoryExists($basePath.'2');
         $this->assertDirectoryExists($basePath.'3');
@@ -269,7 +219,6 @@ class FilesystemTest extends FilesystemTestCase
     public function testMkdirCreatesDirectoriesFails()
     {
         $this->expectException('Symfony\Component\Filesystem\Exception\IOException');
->>>>>>> master
         $basePath = $this->workspace.\DIRECTORY_SEPARATOR;
         $dir = $basePath.'2';
 
@@ -287,17 +236,9 @@ class FilesystemTest extends FilesystemTestCase
         $this->assertFileExists($file);
     }
 
-<<<<<<< HEAD
-    /**
-     * @expectedException \Symfony\Component\Filesystem\Exception\IOException
-     */
-    public function testTouchFails()
-    {
-=======
     public function testTouchFails()
     {
         $this->expectException('Symfony\Component\Filesystem\Exception\IOException');
->>>>>>> master
         $file = $this->workspace.\DIRECTORY_SEPARATOR.'1'.\DIRECTORY_SEPARATOR.'2';
 
         $this->filesystem->touch($file);
@@ -406,11 +347,7 @@ class FilesystemTest extends FilesystemTestCase
 
         // create symlink to dir using trailing forward slash
         $this->filesystem->symlink($basePath.'dir/', $basePath.'dir-link');
-<<<<<<< HEAD
-        $this->assertTrue(is_dir($basePath.'dir-link'));
-=======
         $this->assertDirectoryExists($basePath.'dir-link');
->>>>>>> master
 
         // create symlink to nonexistent dir
         rmdir($basePath.'dir');
@@ -433,17 +370,9 @@ class FilesystemTest extends FilesystemTestCase
         $this->assertTrue($this->filesystem->exists($basePath.'folder'));
     }
 
-<<<<<<< HEAD
-    /**
-     * @expectedException \Symfony\Component\Filesystem\Exception\IOException
-     */
-    public function testFilesExistsFails()
-    {
-=======
     public function testFilesExistsFails()
     {
         $this->expectException('Symfony\Component\Filesystem\Exception\IOException');
->>>>>>> master
         if ('\\' !== \DIRECTORY_SEPARATOR) {
             $this->markTestSkipped('Long file names are an issue on Windows');
         }
@@ -668,17 +597,9 @@ class FilesystemTest extends FilesystemTestCase
         $this->assertSame($owner, $this->getFileOwner($link));
     }
 
-<<<<<<< HEAD
-    /**
-     * @expectedException \Symfony\Component\Filesystem\Exception\IOException
-     */
-    public function testChownSymlinkFails()
-    {
-=======
     public function testChownSymlinkFails()
     {
         $this->expectException('Symfony\Component\Filesystem\Exception\IOException');
->>>>>>> master
         $this->markAsSkippedIfSymlinkIsMissing();
 
         $file = $this->workspace.\DIRECTORY_SEPARATOR.'file';
@@ -691,17 +612,9 @@ class FilesystemTest extends FilesystemTestCase
         $this->filesystem->chown($link, 'user'.time().mt_rand(1000, 9999));
     }
 
-<<<<<<< HEAD
-    /**
-     * @expectedException \Symfony\Component\Filesystem\Exception\IOException
-     */
-    public function testChownLinkFails()
-    {
-=======
     public function testChownLinkFails()
     {
         $this->expectException('Symfony\Component\Filesystem\Exception\IOException');
->>>>>>> master
         $this->markAsSkippedIfLinkIsMissing();
 
         $file = $this->workspace.\DIRECTORY_SEPARATOR.'file';
@@ -714,17 +627,9 @@ class FilesystemTest extends FilesystemTestCase
         $this->filesystem->chown($link, 'user'.time().mt_rand(1000, 9999));
     }
 
-<<<<<<< HEAD
-    /**
-     * @expectedException \Symfony\Component\Filesystem\Exception\IOException
-     */
-    public function testChownFail()
-    {
-=======
     public function testChownFail()
     {
         $this->expectException('Symfony\Component\Filesystem\Exception\IOException');
->>>>>>> master
         $this->markAsSkippedIfPosixIsMissing();
 
         $dir = $this->workspace.\DIRECTORY_SEPARATOR.'dir';
@@ -795,17 +700,9 @@ class FilesystemTest extends FilesystemTestCase
         $this->assertSame($group, $this->getFileGroup($link));
     }
 
-<<<<<<< HEAD
-    /**
-     * @expectedException \Symfony\Component\Filesystem\Exception\IOException
-     */
-    public function testChgrpSymlinkFails()
-    {
-=======
     public function testChgrpSymlinkFails()
     {
         $this->expectException('Symfony\Component\Filesystem\Exception\IOException');
->>>>>>> master
         $this->markAsSkippedIfSymlinkIsMissing();
 
         $file = $this->workspace.\DIRECTORY_SEPARATOR.'file';
@@ -818,17 +715,9 @@ class FilesystemTest extends FilesystemTestCase
         $this->filesystem->chgrp($link, 'user'.time().mt_rand(1000, 9999));
     }
 
-<<<<<<< HEAD
-    /**
-     * @expectedException \Symfony\Component\Filesystem\Exception\IOException
-     */
-    public function testChgrpLinkFails()
-    {
-=======
     public function testChgrpLinkFails()
     {
         $this->expectException('Symfony\Component\Filesystem\Exception\IOException');
->>>>>>> master
         $this->markAsSkippedIfLinkIsMissing();
 
         $file = $this->workspace.\DIRECTORY_SEPARATOR.'file';
@@ -841,17 +730,9 @@ class FilesystemTest extends FilesystemTestCase
         $this->filesystem->chgrp($link, 'user'.time().mt_rand(1000, 9999));
     }
 
-<<<<<<< HEAD
-    /**
-     * @expectedException \Symfony\Component\Filesystem\Exception\IOException
-     */
-    public function testChgrpFail()
-    {
-=======
     public function testChgrpFail()
     {
         $this->expectException('Symfony\Component\Filesystem\Exception\IOException');
->>>>>>> master
         $this->markAsSkippedIfPosixIsMissing();
 
         $dir = $this->workspace.\DIRECTORY_SEPARATOR.'dir';
@@ -872,17 +753,9 @@ class FilesystemTest extends FilesystemTestCase
         $this->assertFileExists($newPath);
     }
 
-<<<<<<< HEAD
-    /**
-     * @expectedException \Symfony\Component\Filesystem\Exception\IOException
-     */
-    public function testRenameThrowsExceptionIfTargetAlreadyExists()
-    {
-=======
     public function testRenameThrowsExceptionIfTargetAlreadyExists()
     {
         $this->expectException('Symfony\Component\Filesystem\Exception\IOException');
->>>>>>> master
         $file = $this->workspace.\DIRECTORY_SEPARATOR.'file';
         $newPath = $this->workspace.\DIRECTORY_SEPARATOR.'new_file';
 
@@ -906,17 +779,9 @@ class FilesystemTest extends FilesystemTestCase
         $this->assertFileExists($newPath);
     }
 
-<<<<<<< HEAD
-    /**
-     * @expectedException \Symfony\Component\Filesystem\Exception\IOException
-     */
-    public function testRenameThrowsExceptionOnError()
-    {
-=======
     public function testRenameThrowsExceptionOnError()
     {
         $this->expectException('Symfony\Component\Filesystem\Exception\IOException');
->>>>>>> master
         $file = $this->workspace.\DIRECTORY_SEPARATOR.uniqid('fs_test_', true);
         $newPath = $this->workspace.\DIRECTORY_SEPARATOR.'new_file';
 
@@ -956,11 +821,7 @@ class FilesystemTest extends FilesystemTestCase
 
         $this->assertFalse(is_link($link));
         $this->assertFalse(is_file($link));
-<<<<<<< HEAD
-        $this->assertFalse(is_dir($link));
-=======
         $this->assertDirectoryNotExists($link);
->>>>>>> master
     }
 
     public function testSymlinkIsOverwrittenIfPointsToDifferentTarget()
@@ -1259,23 +1120,6 @@ class FilesystemTest extends FilesystemTestCase
         return $paths;
     }
 
-<<<<<<< HEAD
-    /**
-     * @expectedException \Symfony\Component\Filesystem\Exception\InvalidArgumentException
-     * @expectedExceptionMessage The start path "var/lib/symfony/src/Symfony/Component" is not absolute.
-     */
-    public function testMakePathRelativeWithRelativeStartPath()
-    {
-        $this->assertSame('../../../', $this->filesystem->makePathRelative('/var/lib/symfony/', 'var/lib/symfony/src/Symfony/Component'));
-    }
-
-    /**
-     * @expectedException \Symfony\Component\Filesystem\Exception\InvalidArgumentException
-     * @expectedExceptionMessage The end path "var/lib/symfony/" is not absolute.
-     */
-    public function testMakePathRelativeWithRelativeEndPath()
-    {
-=======
     public function testMakePathRelativeWithRelativeStartPath()
     {
         $this->expectException('Symfony\Component\Filesystem\Exception\InvalidArgumentException');
@@ -1287,7 +1131,6 @@ class FilesystemTest extends FilesystemTestCase
     {
         $this->expectException('Symfony\Component\Filesystem\Exception\InvalidArgumentException');
         $this->expectExceptionMessage('The end path "var/lib/symfony/" is not absolute.');
->>>>>>> master
         $this->assertSame('../../../', $this->filesystem->makePathRelative('var/lib/symfony/', '/var/lib/symfony/src/Symfony/Component'));
     }
 
@@ -1307,13 +1150,8 @@ class FilesystemTest extends FilesystemTestCase
 
         $this->filesystem->mirror($sourcePath, $targetPath);
 
-<<<<<<< HEAD
-        $this->assertTrue(is_dir($targetPath));
-        $this->assertTrue(is_dir($targetPath.'directory'));
-=======
         $this->assertDirectoryExists($targetPath);
         $this->assertDirectoryExists($targetPath.'directory');
->>>>>>> master
         $this->assertFileEquals($file1, $targetPath.'directory'.\DIRECTORY_SEPARATOR.'file1');
         $this->assertFileEquals($file2, $targetPath.'file2');
 
@@ -1346,11 +1184,7 @@ class FilesystemTest extends FilesystemTestCase
 
         $this->filesystem->mirror($sourcePath, $targetPath);
 
-<<<<<<< HEAD
-        $this->assertTrue(is_dir($targetPath));
-=======
         $this->assertDirectoryExists($targetPath);
->>>>>>> master
 
         $this->filesystem->remove($sourcePath);
     }
@@ -1369,11 +1203,7 @@ class FilesystemTest extends FilesystemTestCase
 
         $this->filesystem->mirror($sourcePath, $targetPath);
 
-<<<<<<< HEAD
-        $this->assertTrue(is_dir($targetPath));
-=======
         $this->assertDirectoryExists($targetPath);
->>>>>>> master
         $this->assertFileEquals($sourcePath.'file1', $targetPath.'link1');
         $this->assertTrue(is_link($targetPath.\DIRECTORY_SEPARATOR.'link1'));
     }
@@ -1393,11 +1223,7 @@ class FilesystemTest extends FilesystemTestCase
 
         $this->filesystem->mirror($sourcePath, $targetPath);
 
-<<<<<<< HEAD
-        $this->assertTrue(is_dir($targetPath));
-=======
         $this->assertDirectoryExists($targetPath);
->>>>>>> master
         $this->assertFileEquals($sourcePath.'/nested/file1.txt', $targetPath.'link1/file1.txt');
         $this->assertTrue(is_link($targetPath.\DIRECTORY_SEPARATOR.'link1'));
     }
@@ -1421,11 +1247,7 @@ class FilesystemTest extends FilesystemTestCase
 
         $this->filesystem->mirror($sourcePath, $targetPath);
 
-<<<<<<< HEAD
-        $this->assertTrue(is_dir($targetPath));
-=======
         $this->assertDirectoryExists($targetPath);
->>>>>>> master
         $this->assertFileEquals($sourcePath.'/nested/file1.txt', $targetPath.'link1/file1.txt');
         $this->assertTrue(is_link($targetPath.\DIRECTORY_SEPARATOR.'link1'));
         $this->assertEquals('\\' === \DIRECTORY_SEPARATOR ? realpath($sourcePath.'\nested') : 'nested', readlink($targetPath.\DIRECTORY_SEPARATOR.'link1'));
@@ -1448,11 +1270,7 @@ class FilesystemTest extends FilesystemTestCase
 
         chdir($oldPath);
 
-<<<<<<< HEAD
-        $this->assertTrue(is_dir($targetPath));
-=======
         $this->assertDirectoryExists($targetPath);
->>>>>>> master
         $this->assertFileExists($targetPath.'source');
         $this->assertFileExists($targetPath.'target');
     }
@@ -1477,11 +1295,7 @@ class FilesystemTest extends FilesystemTestCase
 
         chdir($oldPath);
 
-<<<<<<< HEAD
-        $this->assertTrue(is_dir($targetPath));
-=======
         $this->assertDirectoryExists($targetPath);
->>>>>>> master
         $this->assertFileExists($targetPath.'source');
         $this->assertFileNotExists($targetPath.'target');
     }
@@ -1588,17 +1402,9 @@ class FilesystemTest extends FilesystemTestCase
         $this->assertFileExists($filename);
     }
 
-<<<<<<< HEAD
-    /**
-     * @expectedException \Symfony\Component\Filesystem\Exception\IOException
-     */
-    public function testTempnamWithZlibSchemeFails()
-    {
-=======
     public function testTempnamWithZlibSchemeFails()
     {
         $this->expectException('Symfony\Component\Filesystem\Exception\IOException');
->>>>>>> master
         $scheme = 'compress.zlib://';
         $dirname = $scheme.$this->workspace;
 
@@ -1619,17 +1425,9 @@ class FilesystemTest extends FilesystemTestCase
         $this->assertFileNotExists($filename);
     }
 
-<<<<<<< HEAD
-    /**
-     * @expectedException \Symfony\Component\Filesystem\Exception\IOException
-     */
-    public function testTempnamWithPharSchemeFails()
-    {
-=======
     public function testTempnamWithPharSchemeFails()
     {
         $this->expectException('Symfony\Component\Filesystem\Exception\IOException');
->>>>>>> master
         // Skip test if Phar disabled phar.readonly must be 0 in php.ini
         if (!\Phar::canWrite()) {
             $this->markTestSkipped('This test cannot run when phar.readonly is 1.');
@@ -1644,17 +1442,9 @@ class FilesystemTest extends FilesystemTestCase
         $this->filesystem->tempnam($dirname, $pharname.'/bar');
     }
 
-<<<<<<< HEAD
-    /**
-     * @expectedException \Symfony\Component\Filesystem\Exception\IOException
-     */
-    public function testTempnamWithHTTPSchemeFails()
-    {
-=======
     public function testTempnamWithHTTPSchemeFails()
     {
         $this->expectException('Symfony\Component\Filesystem\Exception\IOException');
->>>>>>> master
         $scheme = 'http://';
         $dirname = $scheme.$this->workspace;
 

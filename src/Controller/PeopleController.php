@@ -2,7 +2,8 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
-
+use Cake\Event\Event;
+use Cake\Controller\Component;
 /**
  * People Controller
  *
@@ -22,6 +23,10 @@ class PeopleController extends AppController
         $people = $this->paginate($this->People);
 
         $this->set(compact('people'));
+    }
+    public function beforeFilter(Event $event) {
+        parent::beforeFilter($event);
+        $this->Auth->allow(['add','login']);
     }
 
     /**

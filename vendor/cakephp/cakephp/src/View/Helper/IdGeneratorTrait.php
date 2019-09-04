@@ -33,11 +33,7 @@ trait IdGeneratorTrait
     /**
      * A list of id suffixes used in the current rendering.
      *
-<<<<<<< HEAD
-     * @var array
-=======
      * @var string[]
->>>>>>> master
      */
     protected $_idSuffixes = [];
 

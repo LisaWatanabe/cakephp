@@ -5,15 +5,12 @@ namespace PhpParser\Builder;
 use PhpParser\Comment;
 use PhpParser\Node\Name;
 use PhpParser\Node\Stmt;
-<<<<<<< HEAD
-=======
 use PhpParser\Node\Stmt\Class_;
 use PhpParser\Node\Stmt\ClassConst;
 use PhpParser\Node\Stmt\ClassMethod;
 use PhpParser\Node\Stmt\Property;
 use PhpParser\Node\Stmt\PropertyProperty;
 use PhpParser\Node\Stmt\TraitUse;
->>>>>>> master
 
 class TraitTest extends \PHPUnit\Framework\TestCase
 {
@@ -52,8 +49,6 @@ class TraitTest extends \PHPUnit\Framework\TestCase
             ->addStmt(new Stmt\Echo_([]))
         ;
     }
-<<<<<<< HEAD
-=======
 
     public function testGetMethods() {
         $methods = [
@@ -93,5 +88,4 @@ class TraitTest extends \PHPUnit\Framework\TestCase
 
         $this->assertSame($properties, $trait->getProperties());
     }
->>>>>>> master
 }

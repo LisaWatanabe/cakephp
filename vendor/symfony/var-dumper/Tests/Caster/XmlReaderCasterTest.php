@@ -24,21 +24,13 @@ class XmlReaderCasterTest extends TestCase
     /** @var \XmlReader */
     private $reader;
 
-<<<<<<< HEAD
-    protected function setUp()
-=======
     protected function setUp(): void
->>>>>>> master
     {
         $this->reader = new \XmlReader();
         $this->reader->open(__DIR__.'/../Fixtures/xml_reader.xml');
     }
 
-<<<<<<< HEAD
-    protected function tearDown()
-=======
     protected function tearDown(): void
->>>>>>> master
     {
         $this->reader->close();
     }

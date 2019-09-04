@@ -48,13 +48,7 @@ class DescriptorHelper extends Helper
      * * format: string, the output format name
      * * raw_text: boolean, sets output type as raw
      *
-<<<<<<< HEAD
-     * @param OutputInterface $output
-     * @param object          $object
-     * @param array           $options
-=======
      * @param object $object
->>>>>>> master
      *
      * @throws InvalidArgumentException when the given format is not supported
      */
@@ -76,12 +70,7 @@ class DescriptorHelper extends Helper
     /**
      * Registers a descriptor.
      *
-<<<<<<< HEAD
-     * @param string              $format
-     * @param DescriptorInterface $descriptor
-=======
      * @param string $format
->>>>>>> master
      *
      * @return $this
      */

@@ -199,12 +199,6 @@ EOF
         }
     }
 
-<<<<<<< HEAD
-    private function getStdin()
-    {
-        if (0 !== ftell(STDIN)) {
-            return;
-=======
     /**
      * @return string|null
      */
@@ -212,7 +206,6 @@ EOF
     {
         if (0 !== ftell(STDIN)) {
             return null;
->>>>>>> master
         }
 
         $inputs = '';

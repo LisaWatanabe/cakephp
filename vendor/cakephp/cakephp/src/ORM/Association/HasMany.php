@@ -374,10 +374,7 @@ class HasMany extends Association
         $conditions = [
             'OR' => (new Collection($targetEntities))
                 ->map(function ($entity) use ($targetPrimaryKey) {
-<<<<<<< HEAD
-=======
                     /** @var \Cake\Datasource\EntityInterface $entity */
->>>>>>> master
                     return $entity->extract($targetPrimaryKey);
                 })
                 ->toList()
@@ -480,10 +477,7 @@ class HasMany extends Association
         $exclusions = new Collection($remainingEntities);
         $exclusions = $exclusions->map(
             function ($ent) use ($primaryKey) {
-<<<<<<< HEAD
-=======
                 /** @var \Cake\Datasource\EntityInterface $ent */
->>>>>>> master
                 return $ent->extract($primaryKey);
             }
         )

@@ -2,6 +2,8 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
+use Cake\Controller\Component;
+use Cake\Event\Event;
 
 /**
  * Books Controller
@@ -23,14 +25,11 @@ class BooksController extends AppController
 
         $this->set(compact('books'));
     }
+    public function beforeFilter(Event $event) {
+        parent::beforeFilter($event);
+        $this->Auth->allow(['add','login']);
+    }
 
-    /**
-     * View method
-     *
-     * @param string|null $id Book id.
-     * @return \Cake\Http\Response|null
-     * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
-     */
     public function view($id = null)
     {
         $book = $this->Books->get($id, [

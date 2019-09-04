@@ -1,4 +1,78 @@
 <?php
+namespace App\Controller;
+
+use Cake\Controller\Component;
+use Cake\ORM\TableRegistry;
+use Cake\Http\Middleware\CsrfProtectionMiddleware;
+use Cake\Event\Event;
+use Cake\Network\Exception\InvalidCsrfTokenException;
+
+class HelloController extends AppController {
+	public function initialize(){
+		parent::initialize();
+		$this->boards = TableRegistry::get('Boards');
+	}
+	public function beforeFilter(Event $event) {
+        parent::beforeFilter($event);
+        $this->Auth->allow(['add','login','index']);
+    }
+	public function index(){
+		$data = $this->boards->find('something',['field'=>'title','value'=>'%hello%']);
+		$this->set('data',$data);
+	}
+	public function write(){
+		$val = $this->request->query['val'];
+		$this->Cookie->write('mykey', $val);
+		$this->redirect(['action' => 'index']);
+	}
+}
+// 複数選択 POST送信
+	// public function index(){
+	// 	$result ="";
+	// 	if ($this->request->isPost()) {
+	// 		$result = "<pre>※送信された情報<br>";
+	// 		foreach ($this->request->data['HelloForm'] as $key => $val) {
+	// 			$v_str = '';
+	// 			foreach ($val as $v) {
+	// 			 	$v_str .= $v . ' ';
+	// 			 }
+	// 			 $result .= $key . ' => ' . $v_str . "<br>";
+	// 		}
+	// 		$result .= "</pre>";
+	// 	} else {
+	// 		$result = "※何か書いて送信してください。";
+	// 	}
+	// 	$this->set("result",$result);
+	// }
+	// GET送信
+	// public function sendForm(){
+		// $str = $this->request->query['text1'];
+		// $result = "※送信された情報<br>";
+		// foreach ($this->request->query as $key => $val) {
+		// 	$result .= $key ." => " . $val . "<br>";
+		// }
+		// if ($str != ""){
+		// 	$result = "you type: " . $str;
+		// } else {
+		// 	$result = "empty.";
+		// }
+		// sendFormに<script>タグを送信されても無効化することができる h()
+// 		$this->set("result",$result);
+// 	}
+// }
+
+	// // POST送信
+	// public function sendForm(){
+	// 	$str = $this->request->data('text1');
+	// 	$result = "";
+	// 	if ($str != "") {
+	// 		$result = "you type: ".$str;
+	// 	} else {
+	// 		$result = "empty.";
+	// 	}
+		// $this->set("str",$str);
+	// 	$this->set("result",h($result));
+	// }
 // クラス類の配置場所を階層的に整理する仕組み
 // 同じ名前のクラスがあってもトラブルを起こさない
 // namespace App\Controller;
@@ -114,103 +188,6 @@
 // 		$this->set('footer','Hello/footer' . $n);
 // 	}
 // }
-
-// フォームの送信
-namespace App\Controller;
-<<<<<<< HEAD
-class HelloController extends AppController {
-	public function initialize(){
-		$this->viewBuilder()->layout('Hello');
-		$this->set('msg','Hello/index');
-		$this->set('footer','Hello/footer2');
-	}
-	public function index(){
-		$result ="";
-		if ($this->request->isPost()) {
-			$result = $this->request->data['HelloForm']['date'];
-		} else {
-			$result = "※何か書いて送信してください。";
-		}
-		$this->set("result",$result);
-=======
-use Cake\Controller\Component;
-use Cake\ORM\TableRegistry;
-use Cake\Http\Middleware\CsrfProtectionMiddleware;
-use Cake\Event\Event;
-
-class HelloController extends AppController {
-	public function initialize(){
-		parent::initialize();
-		$this->loadComponent('Csrf');
-		// $this->viewBuilder()->layout('Hello');
-		// $this->set('msg','Hello/index');
-		// $this->set('footer','Hello/footer2');
-		// $this->loadComponent('Flash');
-	}
-	public function index(){
-		if ($this->request->isPost()) {
-			if (!empty($this->request->data['name']) && 
-				!empty($this->request->data['password'])) {
-				$this->Flash->success('OK!');
-			} else {
-				$this->Flash->error('bad...');
-			}
-		} else {
-			$this->Flash->info('please input form:');
-		}
-	}
-	public function beforeFilter(Event $event){
-		$this->eventManager()->off($this->Csrf);
->>>>>>> master
-	}
-}
-// 複数選択 POST送信
-	// public function index(){
-	// 	$result ="";
-	// 	if ($this->request->isPost()) {
-	// 		$result = "<pre>※送信された情報<br>";
-	// 		foreach ($this->request->data['HelloForm'] as $key => $val) {
-	// 			$v_str = '';
-	// 			foreach ($val as $v) {
-	// 			 	$v_str .= $v . ' ';
-	// 			 }
-	// 			 $result .= $key . ' => ' . $v_str . "<br>";
-	// 		}
-	// 		$result .= "</pre>";
-	// 	} else {
-	// 		$result = "※何か書いて送信してください。";
-	// 	}
-	// 	$this->set("result",$result);
-	// }
-	// GET送信
-	// public function sendForm(){
-		// $str = $this->request->query['text1'];
-		// $result = "※送信された情報<br>";
-		// foreach ($this->request->query as $key => $val) {
-		// 	$result .= $key ." => " . $val . "<br>";
-		// }
-		// if ($str != ""){
-		// 	$result = "you type: " . $str;
-		// } else {
-		// 	$result = "empty.";
-		// }
-		// sendFormに<script>タグを送信されても無効化することができる h()
-// 		$this->set("result",$result);
-// 	}
-// }
-
-	// // POST送信
-	// public function sendForm(){
-	// 	$str = $this->request->data('text1');
-	// 	$result = "";
-	// 	if ($str != "") {
-	// 		$result = "you type: ".$str;
-	// 	} else {
-	// 		$result = "empty.";
-	// 	}
-		// $this->set("str",$str);
-	// 	$this->set("result",h($result));
-	// }
 
 
 

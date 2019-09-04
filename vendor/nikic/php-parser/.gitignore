@@ -2,7 +2,4 @@ vendor/
 composer.lock
 grammar/kmyacc.exe
 grammar/y.output
-<<<<<<< HEAD
-=======
 .phpunit.result.cache
->>>>>>> master

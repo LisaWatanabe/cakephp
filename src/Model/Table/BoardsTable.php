@@ -12,6 +12,7 @@ use Cake\Validation\Validator;
 class BoardsTable extends Table {
 	public function initialize(array $config){
 		$this->belongsTo('People');
+		$this->addBehavior('SuperTable');
 	}
 	public function validationDefault(Validator $validator){
 		$validator->integer('id');

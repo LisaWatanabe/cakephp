@@ -116,11 +116,7 @@ class BinaryUuidType extends Type implements TypeInterface
     }
 
     /**
-<<<<<<< HEAD
-     * Marshalls flat data into PHP objects.
-=======
      * Marshals flat data into PHP objects.
->>>>>>> master
      *
      * Most useful for converting request data into PHP objects
      * that make sense for the rest of the ORM/Database layers.
@@ -159,15 +155,9 @@ class BinaryUuidType extends Type implements TypeInterface
      * Converts a string uuid to a binary representation
      *
      *
-<<<<<<< HEAD
-     * @param mixed $string The value to convert.
-     *
-     * @return mixed Converted value.
-=======
      * @param string $string The value to convert.
      *
      * @return string Converted value.
->>>>>>> master
      */
     protected function convertStringToBinaryUuid($string)
     {

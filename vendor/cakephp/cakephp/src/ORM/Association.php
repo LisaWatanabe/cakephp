@@ -105,22 +105,14 @@ abstract class Association
     /**
      * The field name in the owning side table that is used to match with the foreignKey
      *
-<<<<<<< HEAD
-     * @var string|array
-=======
      * @var string|string[]
->>>>>>> master
      */
     protected $_bindingKey;
 
     /**
      * The name of the field representing the foreign key to the table to load
      *
-<<<<<<< HEAD
-     * @var string|array
-=======
      * @var string|string[]
->>>>>>> master
      */
     protected $_foreignKey;
 
@@ -569,11 +561,7 @@ abstract class Association
      * Sets the name of the field representing the binding field with the target table.
      * When not manually specified the primary key of the owning side table is used.
      *
-<<<<<<< HEAD
-     * @param string|array $key the table field or fields to be used to link both tables together
-=======
      * @param string|string[] $key the table field or fields to be used to link both tables together
->>>>>>> master
      * @return $this
      */
     public function setBindingKey($key)
@@ -587,11 +575,7 @@ abstract class Association
      * Gets the name of the field representing the binding field with the target table.
      * When not manually specified the primary key of the owning side table is used.
      *
-<<<<<<< HEAD
-     * @return string|array
-=======
      * @return string|string[]
->>>>>>> master
      */
     public function getBindingKey()
     {
@@ -630,11 +614,7 @@ abstract class Association
     /**
      * Gets the name of the field representing the foreign key to the target table.
      *
-<<<<<<< HEAD
-     * @return string|array
-=======
      * @return string|string[]
->>>>>>> master
      */
     public function getForeignKey()
     {
@@ -644,11 +624,7 @@ abstract class Association
     /**
      * Sets the name of the field representing the foreign key to the target table.
      *
-<<<<<<< HEAD
-     * @param string|array $key the key or keys to be used to link both tables together
-=======
      * @param string|string[] $key the key or keys to be used to link both tables together
->>>>>>> master
      * @return $this
      */
     public function setForeignKey($key)

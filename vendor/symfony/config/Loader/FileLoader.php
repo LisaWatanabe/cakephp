@@ -166,10 +166,7 @@ abstract class FileLoader extends Loader
                 throw new LoaderLoadException($resource, $sourceResource, null, $e, $type);
             }
         }
-<<<<<<< HEAD
-=======
 
         return null;
->>>>>>> master
     }
 }

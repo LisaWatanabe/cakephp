@@ -49,11 +49,7 @@ interface TypeInterface
     public function toStatement($value, Driver $driver);
 
     /**
-<<<<<<< HEAD
-     * Marshalls flat data into PHP objects.
-=======
      * Marshals flat data into PHP objects.
->>>>>>> master
      *
      * Most useful for converting request data into PHP objects,
      * that make sense for the rest of the ORM/Database layers.

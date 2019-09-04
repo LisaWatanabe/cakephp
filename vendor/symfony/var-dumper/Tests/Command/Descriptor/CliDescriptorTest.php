@@ -23,11 +23,7 @@ class CliDescriptorTest extends TestCase
     private static $timezone;
     private static $prevTerminalEmulator;
 
-<<<<<<< HEAD
-    public static function setUpBeforeClass()
-=======
     public static function setUpBeforeClass(): void
->>>>>>> master
     {
         self::$timezone = date_default_timezone_get();
         date_default_timezone_set('UTC');
@@ -36,11 +32,7 @@ class CliDescriptorTest extends TestCase
         putenv('TERMINAL_EMULATOR');
     }
 
-<<<<<<< HEAD
-    public static function tearDownAfterClass()
-=======
     public static function tearDownAfterClass(): void
->>>>>>> master
     {
         date_default_timezone_set(self::$timezone);
         putenv('TERMINAL_EMULATOR'.(self::$prevTerminalEmulator ? '='.self::$prevTerminalEmulator : ''));

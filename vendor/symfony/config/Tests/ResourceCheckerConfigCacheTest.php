@@ -20,20 +20,12 @@ class ResourceCheckerConfigCacheTest extends TestCase
 {
     private $cacheFile = null;
 
-<<<<<<< HEAD
-    protected function setUp()
-=======
     protected function setUp(): void
->>>>>>> master
     {
         $this->cacheFile = tempnam(sys_get_temp_dir(), 'config_');
     }
 
-<<<<<<< HEAD
-    protected function tearDown()
-=======
     protected function tearDown(): void
->>>>>>> master
     {
         $files = [$this->cacheFile, "{$this->cacheFile}.meta"];
 

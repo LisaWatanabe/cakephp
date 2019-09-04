@@ -37,11 +37,7 @@ class RoutesPanel extends DebugPanel
         }
 
         $routes = array_filter(Router::routes(), function ($route) {
-<<<<<<< HEAD
-            return $route->defaults['plugin'] !== 'DebugKit';
-=======
             return (!isset($routes->defaults['plugin'])) || $route->defaults['plugin'] !== 'DebugKit';
->>>>>>> master
         });
 
         return count($routes);
