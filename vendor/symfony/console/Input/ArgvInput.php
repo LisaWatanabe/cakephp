@@ -283,11 +283,8 @@ class ArgvInput extends Input
 
             return $token;
         }
-<<<<<<< HEAD
-=======
 
         return null;
->>>>>>> master
     }
 
     /**

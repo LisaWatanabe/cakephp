@@ -1188,21 +1188,6 @@ class PaginatorHelper extends Helper
         $links = [];
 
         if ($options['prev'] && $this->hasPrev()) {
-<<<<<<< HEAD
-            $links[] = $this->Html->meta('prev', $this->generateUrl(['page' => $params['page'] - 1], null, ['fullBase' => true]));
-        }
-
-        if ($options['next'] && $this->hasNext()) {
-            $links[] = $this->Html->meta('next', $this->generateUrl(['page' => $params['page'] + 1], null, ['fullBase' => true]));
-        }
-
-        if ($options['first']) {
-            $links[] = $this->Html->meta('first', $this->generateUrl(['page' => 1], null, ['fullBase' => true]));
-        }
-
-        if ($options['last']) {
-            $links[] = $this->Html->meta('last', $this->generateUrl(['page' => $params['pageCount']], null, ['fullBase' => true]));
-=======
             $links[] = $this->Html->meta(
                 'prev',
                 $this->generateUrl(['page' => $params['page'] - 1], null, ['escape' => false, 'fullBase' => true])
@@ -1228,7 +1213,6 @@ class PaginatorHelper extends Helper
                 'last',
                 $this->generateUrl(['page' => $params['pageCount']], null, ['escape' => false, 'fullBase' => true])
             );
->>>>>>> master
         }
 
         $out = implode($links);

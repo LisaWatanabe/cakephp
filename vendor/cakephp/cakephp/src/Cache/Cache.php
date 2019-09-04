@@ -417,11 +417,7 @@ class Cache
      * @param string $key Identifier for the data
      * @param int $offset How much to add
      * @param string $config Optional string configuration name. Defaults to 'default'
-<<<<<<< HEAD
-     * @return mixed new value, or false if the data doesn't exist, is not integer,
-=======
      * @return int|false New value, or false if the data doesn't exist, is not integer,
->>>>>>> master
      *    or if there was an error fetching it.
      */
     public static function increment($key, $offset = 1, $config = 'default')
@@ -440,11 +436,7 @@ class Cache
      * @param string $key Identifier for the data
      * @param int $offset How much to subtract
      * @param string $config Optional string configuration name. Defaults to 'default'
-<<<<<<< HEAD
-     * @return mixed new value, or false if the data doesn't exist, is not integer,
-=======
      * @return int|false New value, or false if the data doesn't exist, is not integer,
->>>>>>> master
      *   or if there was an error fetching it
      */
     public static function decrement($key, $offset = 1, $config = 'default')

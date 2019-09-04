@@ -89,11 +89,7 @@ EOTXT
         }
         $var = [
             (new \ReflectionMethod($this, __FUNCTION__))->getClosure($this),
-<<<<<<< HEAD
-            (new \ReflectionMethod(__CLASS__, 'tearDownAfterClass'))->getClosure(),
-=======
             (new \ReflectionMethod(__CLASS__, 'stub'))->getClosure(),
->>>>>>> master
         ];
 
         $this->assertDumpMatchesFormat(
@@ -104,14 +100,9 @@ array:2 [
     file: "%sReflectionCasterTest.php"
     line: "%d to %d"
   }
-<<<<<<< HEAD
-  1 => %sTestCase::tearDownAfterClass() {
-    file: "%sTestCase.php"
-=======
   1 => Symfony\Component\VarDumper\Tests\Caster\ReflectionCasterTest::stub(): void {
     returnType: "void"
     file: "%sReflectionCasterTest.php"
->>>>>>> master
     line: "%d to %d"
   }
 ]
@@ -254,13 +245,10 @@ Generator {
 EODUMP;
         $this->assertDumpMatchesFormat($expectedDump, $generator);
     }
-<<<<<<< HEAD
-=======
 
     public static function stub(): void
     {
     }
->>>>>>> master
 }
 
 function reflectionParameterFixture(NotLoadableClass $arg1 = null, $arg2)

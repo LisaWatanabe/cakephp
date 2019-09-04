@@ -24,23 +24,6 @@ class YamlTest extends TestCase
         $this->assertEquals($data, $parsed);
     }
 
-<<<<<<< HEAD
-    /**
-     * @expectedException \InvalidArgumentException
-     * @expectedExceptionMessage The indentation must be greater than zero
-     */
-    public function testZeroIndentationThrowsException()
-    {
-        Yaml::dump(['lorem' => 'ipsum', 'dolor' => 'sit'], 2, 0);
-    }
-
-    /**
-     * @expectedException \InvalidArgumentException
-     * @expectedExceptionMessage The indentation must be greater than zero
-     */
-    public function testNegativeIndentationThrowsException()
-    {
-=======
     public function testZeroIndentationThrowsException()
     {
         $this->expectException('InvalidArgumentException');
@@ -52,7 +35,6 @@ class YamlTest extends TestCase
     {
         $this->expectException('InvalidArgumentException');
         $this->expectExceptionMessage('The indentation must be greater than zero');
->>>>>>> master
         Yaml::dump(['lorem' => 'ipsum', 'dolor' => 'sit'], 2, -4);
     }
 }

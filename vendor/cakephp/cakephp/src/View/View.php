@@ -232,11 +232,7 @@ class View implements EventDispatcherInterface
     /**
      * List of variables to collect from the associated controller.
      *
-<<<<<<< HEAD
-     * @var array
-=======
      * @var string[]
->>>>>>> master
      */
     protected $_passedVars = [
         'viewVars', 'autoLayout', 'helpers', 'template', 'layout', 'name', 'theme',
@@ -282,11 +278,7 @@ class View implements EventDispatcherInterface
     /**
      * Content stack, used for nested templates that all use View::extend();
      *
-<<<<<<< HEAD
-     * @var array
-=======
      * @var string[]
->>>>>>> master
      */
     protected $_stack = [];
 

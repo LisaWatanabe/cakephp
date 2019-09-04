@@ -102,11 +102,7 @@ class FloatType extends Type implements TypeInterface, BatchCastingInterface
     /**
      * {@inheritDoc}
      *
-<<<<<<< HEAD
-     * @return array
-=======
      * @return float[]
->>>>>>> master
      */
     public function manyToPHP(array $values, array $fields, Driver $driver)
     {
@@ -134,11 +130,7 @@ class FloatType extends Type implements TypeInterface, BatchCastingInterface
     }
 
     /**
-<<<<<<< HEAD
-     * Marshalls request data into PHP floats.
-=======
      * Marshals request data into PHP floats.
->>>>>>> master
      *
      * @param mixed $value The value to convert.
      * @return float|null Converted value.

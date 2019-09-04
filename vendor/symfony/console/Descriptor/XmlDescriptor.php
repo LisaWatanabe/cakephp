@@ -81,10 +81,6 @@ class XmlDescriptor extends Descriptor
     }
 
     /**
-<<<<<<< HEAD
-     * @param Application $application
-=======
->>>>>>> master
      * @param string|null $namespace
      *
      * @return \DOMDocument
@@ -182,11 +178,6 @@ class XmlDescriptor extends Descriptor
 
     /**
      * Writes DOM document.
-<<<<<<< HEAD
-     *
-     * @return \DOMDocument|string
-=======
->>>>>>> master
      */
     private function writeDocument(\DOMDocument $dom)
     {

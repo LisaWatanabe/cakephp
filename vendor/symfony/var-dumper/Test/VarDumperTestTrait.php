@@ -29,12 +29,9 @@ trait VarDumperTestTrait
         $this->assertStringMatchesFormat($this->prepareExpectation($expected, $filter), $this->getDump($data, null, $filter), $message);
     }
 
-<<<<<<< HEAD
-=======
     /**
      * @return string|null
      */
->>>>>>> master
     protected function getDump($data, $key = null, $filter = 0)
     {
         $flags = getenv('DUMP_LIGHT_ARRAY') ? CliDumper::DUMP_LIGHT_ARRAY : 0;
@@ -47,11 +44,7 @@ trait VarDumperTestTrait
         $dumper->setColors(false);
         $data = $cloner->cloneVar($data, $filter)->withRefHandles(false);
         if (null !== $key && null === $data = $data->seek($key)) {
-<<<<<<< HEAD
-            return;
-=======
             return null;
->>>>>>> master
         }
 
         return rtrim($dumper->dump($data, true));

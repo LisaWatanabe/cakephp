@@ -76,12 +76,6 @@ class ClassExistenceResource implements SelfCheckingResourceInterface
 
             try {
                 $exists = class_exists($this->resource) || interface_exists($this->resource, false) || trait_exists($this->resource, false);
-<<<<<<< HEAD
-            } catch (\ReflectionException $e) {
-                if (0 >= $timestamp) {
-                    unset(self::$existsCache[1][$this->resource]);
-                    throw $e;
-=======
             } catch (\Exception $e) {
                 try {
                     self::throwOnRequiredClass($this->resource, $e);
@@ -90,7 +84,6 @@ class ClassExistenceResource implements SelfCheckingResourceInterface
                         unset(self::$existsCache[1][$this->resource]);
                         throw $e;
                     }
->>>>>>> master
                 }
             } finally {
                 self::$autoloadedClass = $autoloadedClass;
@@ -120,18 +113,6 @@ class ClassExistenceResource implements SelfCheckingResourceInterface
     }
 
     /**
-<<<<<<< HEAD
-     * @throws \ReflectionException When $class is not found and is required
-     *
-     * @internal
-     */
-    public static function throwOnRequiredClass($class)
-    {
-        if (self::$autoloadedClass === $class) {
-            return;
-        }
-        $e = new \ReflectionException("Class $class not found");
-=======
      * Throws a reflection exception when the passed class does not exist but is required.
      *
      * A class is considered "not required" when it's loaded as part of a "class_exists" or similar check.
@@ -172,24 +153,17 @@ class ClassExistenceResource implements SelfCheckingResourceInterface
             throw $e;
         }
 
->>>>>>> master
         $trace = $e->getTrace();
         $autoloadFrame = [
             'function' => 'spl_autoload_call',
             'args' => [$class],
         ];
-<<<<<<< HEAD
-        $i = 1 + array_search($autoloadFrame, $trace, true);
-
-        if (isset($trace[$i]['function']) && !isset($trace[$i]['class'])) {
-=======
 
         if (false === $i = array_search($autoloadFrame, $trace, true)) {
             throw $e;
         }
 
         if (isset($trace[++$i]['function']) && !isset($trace[$i]['class'])) {
->>>>>>> master
             switch ($trace[$i]['function']) {
                 case 'get_class_methods':
                 case 'get_class_vars':

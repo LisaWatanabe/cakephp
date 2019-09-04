@@ -161,10 +161,6 @@ class Socket
         }
 
         set_error_handler([$this, '_connectionErrorHandler']);
-<<<<<<< HEAD
-        $this->connection = stream_socket_client(
-            $scheme . $this->_config['host'] . ':' . $this->_config['port'],
-=======
         $remoteSocketTarget = $scheme . $this->_config['host'];
         $port = (int)$this->_config['port'];
         if ($port > 0) {
@@ -172,7 +168,6 @@ class Socket
         }
         $this->connection = stream_socket_client(
             $remoteSocketTarget,
->>>>>>> master
             $errNum,
             $errStr,
             $this->_config['timeout'],

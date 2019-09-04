@@ -212,11 +212,7 @@ class StatementDecorator implements StatementInterface, Countable, IteratorAggre
      * Returns the value of the result at position.
      *
      * @param int $position The numeric position of the column to retrieve in the result
-<<<<<<< HEAD
-     * @return mixed|false Returns the specific value of the column designated at $position
-=======
      * @return mixed Returns the specific value of the column designated at $position
->>>>>>> master
      */
     public function fetchColumn($position)
     {

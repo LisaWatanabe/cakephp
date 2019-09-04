@@ -122,19 +122,10 @@ class SymfonyQuestionHelperTest extends AbstractQuestionHelperTest
         $this->assertOutputContains('Question with a trailing \\', $output);
     }
 
-<<<<<<< HEAD
-    /**
-     * @expectedException        \Symfony\Component\Console\Exception\RuntimeException
-     * @expectedExceptionMessage Aborted.
-     */
-    public function testAskThrowsExceptionOnMissingInput()
-    {
-=======
     public function testAskThrowsExceptionOnMissingInput()
     {
         $this->expectException('Symfony\Component\Console\Exception\RuntimeException');
         $this->expectExceptionMessage('Aborted.');
->>>>>>> master
         $dialog = new SymfonyQuestionHelper();
         $dialog->ask($this->createStreamableInputInterfaceMock($this->getInputStream('')), $this->createOutputInterface(), new Question('What\'s your name?'));
     }
@@ -170,10 +161,6 @@ class SymfonyQuestionHelperTest extends AbstractQuestionHelperTest
     {
         rewind($output->getStream());
         $stream = stream_get_contents($output->getStream());
-<<<<<<< HEAD
-        $this->assertContains($expected, $stream);
-=======
         $this->assertStringContainsString($expected, $stream);
->>>>>>> master
     }
 }

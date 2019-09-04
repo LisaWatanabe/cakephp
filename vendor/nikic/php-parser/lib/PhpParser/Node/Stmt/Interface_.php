@@ -28,11 +28,7 @@ class Interface_ extends ClassLike
     public function getSubNodeNames() : array {
         return ['name', 'extends', 'stmts'];
     }
-<<<<<<< HEAD
-    
-=======
 
->>>>>>> master
     public function getType() : string {
         return 'Stmt_Interface';
     }

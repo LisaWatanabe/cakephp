@@ -28,11 +28,7 @@ class ExceptionCasterTest extends TestCase
         return new \Exception(''.$msg);
     }
 
-<<<<<<< HEAD
-    protected function tearDown()
-=======
     protected function tearDown(): void
->>>>>>> master
     {
         ExceptionCaster::$srcContext = 1;
         ExceptionCaster::$traceArgs = true;
@@ -56,10 +52,6 @@ Exception {
       › }
     }
     %s%eTests%eCaster%eExceptionCasterTest.php:40 { …}
-<<<<<<< HEAD
-    Symfony\Component\VarDumper\Tests\Caster\ExceptionCasterTest->testDefaultSettings() {}
-=======
->>>>>>> master
 %A
 EODUMP;
 
@@ -78,12 +70,7 @@ EODUMP;
     ›     return new \Exception(''.$msg);
     › }
   }
-<<<<<<< HEAD
-  %s%eTests%eCaster%eExceptionCasterTest.php:65 { …}
-  Symfony\Component\VarDumper\Tests\Caster\ExceptionCasterTest->testSeek() {}
-=======
   %s%eTests%eCaster%eExceptionCasterTest.php:64 { …}
->>>>>>> master
 %A
 EODUMP;
 
@@ -107,12 +94,7 @@ Exception {
       ›     return new \Exception(''.$msg);
       › }
     }
-<<<<<<< HEAD
-    %s%eTests%eCaster%eExceptionCasterTest.php:84 { …}
-    Symfony\Component\VarDumper\Tests\Caster\ExceptionCasterTest->testNoArgs() {}
-=======
     %s%eTests%eCaster%eExceptionCasterTest.php:82 { …}
->>>>>>> master
 %A
 EODUMP;
 

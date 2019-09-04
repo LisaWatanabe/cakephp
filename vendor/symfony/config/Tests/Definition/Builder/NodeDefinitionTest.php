@@ -14,29 +14,6 @@ namespace Symfony\Component\Config\Tests\Definition\Builder;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\Config\Definition\Builder\ArrayNodeDefinition;
 use Symfony\Component\Config\Definition\Builder\NodeDefinition;
-<<<<<<< HEAD
-use Symfony\Component\Config\Definition\Builder\ScalarNodeDefinition;
-
-class NodeDefinitionTest extends TestCase
-{
-    public function testDefaultPathSeparatorIsDot()
-    {
-        $node = $this->getMockForAbstractClass(NodeDefinition::class, ['foo']);
-
-        $this->assertAttributeSame('.', 'pathSeparator', $node);
-    }
-
-    public function testSetPathSeparatorChangesChildren()
-    {
-        $node = new ArrayNodeDefinition('foo');
-        $scalar = new ScalarNodeDefinition('bar');
-        $node->append($scalar);
-
-        $node->setPathSeparator('/');
-
-        $this->assertAttributeSame('/', 'pathSeparator', $node);
-        $this->assertAttributeSame('/', 'pathSeparator', $scalar);
-=======
 
 class NodeDefinitionTest extends TestCase
 {
@@ -57,6 +34,5 @@ class NodeDefinitionTest extends TestCase
         $parentNode->append($childNode);
 
         $parentNode->setPathSeparator('/');
->>>>>>> master
     }
 }

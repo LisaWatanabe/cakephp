@@ -15,10 +15,7 @@
 namespace Cake\Database\Expression;
 
 use Cake\Database\ExpressionInterface;
-<<<<<<< HEAD
-=======
 use Cake\Database\Query;
->>>>>>> master
 use Cake\Database\TypedResultInterface;
 use Cake\Database\TypedResultTrait;
 use Cake\Database\Type\ExpressionTypeCasterTrait;
@@ -175,15 +172,10 @@ class FunctionExpression extends QueryExpression implements TypedResultInterface
     {
         $parts = [];
         foreach ($this->_conditions as $condition) {
-<<<<<<< HEAD
-            if ($condition instanceof ExpressionInterface) {
-                $condition = sprintf('%s', $condition->sql($generator));
-=======
             if ($condition instanceof Query) {
                 $condition = sprintf('(%s)', $condition->sql($generator));
             } elseif ($condition instanceof ExpressionInterface) {
                 $condition = $condition->sql($generator);
->>>>>>> master
             } elseif (is_array($condition)) {
                 $p = $generator->placeholder('param');
                 $generator->bind($p, $condition['value'], $condition['type']);

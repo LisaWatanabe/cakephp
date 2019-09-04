@@ -15,8 +15,6 @@ abstract class ClassLike extends Node\Stmt
     public $stmts;
 
     /**
-<<<<<<< HEAD
-=======
      * @return TraitUse[]
      */
     public function getTraitUses() : array {
@@ -56,7 +54,6 @@ abstract class ClassLike extends Node\Stmt
     }
 
     /**
->>>>>>> master
      * Gets all methods defined directly in this class/interface/trait
      *
      * @return ClassMethod[]

@@ -19,11 +19,7 @@ class QuestionTest extends TestCase
 {
     private $question;
 
-<<<<<<< HEAD
-    protected function setUp()
-=======
     protected function setUp(): void
->>>>>>> master
     {
         parent::setUp();
         $this->question = new Question('Test question');

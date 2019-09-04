@@ -26,11 +26,7 @@ class TypeMap
      * Used to avoid repetition when calling multiple functions inside this class that
      * may require a custom type for a specific field.
      *
-<<<<<<< HEAD
-     * @var array
-=======
      * @var string[]
->>>>>>> master
      */
     protected $_defaults;
 
@@ -40,22 +36,14 @@ class TypeMap
      * Used to avoid repetition when calling multiple functions inside this class that
      * may require a custom type for a specific field.
      *
-<<<<<<< HEAD
-     * @var array
-=======
      * @var string[]
->>>>>>> master
      */
     protected $_types = [];
 
     /**
      * Creates an instance with the given defaults
      *
-<<<<<<< HEAD
-     * @param array $defaults The defaults to use.
-=======
      * @param string[] $defaults The defaults to use.
->>>>>>> master
      */
     public function __construct(array $defaults = [])
     {
@@ -80,11 +68,7 @@ class TypeMap
      * This method will replace all the existing default mappings with the ones provided.
      * To add into the mappings use `addDefaults()`.
      *
-<<<<<<< HEAD
-     * @param array $defaults Associative array where keys are field names and values
-=======
      * @param string[] $defaults Associative array where keys are field names and values
->>>>>>> master
      * are the correspondent type.
      * @return $this
      */
@@ -98,11 +82,7 @@ class TypeMap
     /**
      * Returns the currently configured types.
      *
-<<<<<<< HEAD
-     * @return array
-=======
      * @return string[]
->>>>>>> master
      */
     public function getDefaults()
     {
@@ -149,11 +129,7 @@ class TypeMap
      *
      * If a key already exists it will not be overwritten.
      *
-<<<<<<< HEAD
-     * @param array $types The additional types to add.
-=======
      * @param string[] $types The additional types to add.
->>>>>>> master
      * @return void
      */
     public function addDefaults(array $types)
@@ -172,11 +148,7 @@ class TypeMap
      *
      * This method will replace all the existing type maps with the ones provided.
      *
-<<<<<<< HEAD
-     * @param array $types Associative array where keys are field names and values
-=======
      * @param string[] $types Associative array where keys are field names and values
->>>>>>> master
      * are the correspondent type.
      * @return $this
      */
@@ -190,11 +162,7 @@ class TypeMap
     /**
      * Gets a map of fields and their associated types for single-use.
      *
-<<<<<<< HEAD
-     * @return array
-=======
      * @return string[]
->>>>>>> master
      */
     public function getTypes()
     {
@@ -238,11 +206,7 @@ class TypeMap
      * null will be returned.
      *
      * @param string $column The type for a given column
-<<<<<<< HEAD
-     * @return null|string
-=======
      * @return string|null
->>>>>>> master
      */
     public function type($column)
     {
@@ -259,11 +223,7 @@ class TypeMap
     /**
      * Returns an array of all types mapped types
      *
-<<<<<<< HEAD
-     * @return array
-=======
      * @return string[]
->>>>>>> master
      */
     public function toArray()
     {

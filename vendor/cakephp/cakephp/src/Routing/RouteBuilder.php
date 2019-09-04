@@ -69,11 +69,7 @@ class RouteBuilder
     /**
      * The extensions that should be set into the routes connected.
      *
-<<<<<<< HEAD
-     * @var array
-=======
      * @var string[]
->>>>>>> master
      */
     protected $_extensions = [];
 
@@ -217,11 +213,7 @@ class RouteBuilder
      * Future routes connected in through this builder will have the connected
      * extensions applied. However, setting extensions does not modify existing routes.
      *
-<<<<<<< HEAD
-     * @param string|array $extensions The extensions to set.
-=======
      * @param string|string[] $extensions The extensions to set.
->>>>>>> master
      * @return $this
      */
     public function setExtensions($extensions)
@@ -234,11 +226,7 @@ class RouteBuilder
     /**
      * Get the extensions in this route builder's scope.
      *
-<<<<<<< HEAD
-     * @return array
-=======
      * @return string[]
->>>>>>> master
      */
     public function getExtensions()
     {
@@ -1082,11 +1070,7 @@ class RouteBuilder
      * Apply a set of middleware to a group
      *
      * @param string $name Name of the middleware group
-<<<<<<< HEAD
-     * @param array $middlewareNames Names of the middleware
-=======
      * @param string[] $middlewareNames Names of the middleware
->>>>>>> master
      * @return $this
      */
     public function middlewareGroup($name, array $middlewareNames)
